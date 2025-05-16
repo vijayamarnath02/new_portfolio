@@ -1,27 +1,27 @@
-:root{
-    --background-color:#F8F9FA;
-    --primary-text:#212529;
-    --secondary-text:#6C757D;
-    --accent-primary:#DD0031;
-    --accent-hover:#C3002F;
-    --border-line:#E0E0E0;
-    --card-background:#FFFFFF;
-    --button-text:#FFFFFF;
-    --font-size-body:1rem;
-    --font-header-size:1.5rem;
-    --font-header-weight:900;
-    --font-family-body:'Outfit', sans-serif;
-}
-.dark-theme {
-    --background-color: #121212;
-    --primary-text: #EAEAEA;
-    --secondary-text: #A0A0A0;
-    --accent-primary: #DD0031;
-    --accent-hover: #FF4A4A;
-    --border-line: #2C2C2C;
-    --card-background: #1E1E1E;
-    --button-text: #FFFFFF; 
-}
+:root {
+    --background-color: #F8F9FA;
+    --primary-text: #212529;
+    --secondary-text: #6C757D;
+    --accent-primary: #6C2BD9;
+    --accent-hover: #5824B5;
+    --border-line: #E0E0E0;
+    --card-background: #FFFFFF;
+    --button-text: #FFFFFF;
+    --font-size-body: 1rem;
+    --font-header-size: 1.8rem;
+    --font-header-weight: 900;
+    --font-family-body: 'Outfit', sans-serif; }
+    
+        .dark-theme {
+            --background-color: #121212;
+            --primary-text: #EAEAEA;
+            --secondary-text: #A0A0A0;
+            --accent-primary: #B388FF;
+            --accent-hover: #D1B3FF;
+            --border-line: #2C2C2C;
+            --card-background: #1E1E1E;
+            --button-text: #FFFFFF;
+        }
 body{
     margin: 0;
     padding: 0;
