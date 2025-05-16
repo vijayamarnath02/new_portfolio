@@ -18,3 +18,8 @@
     --card-background: #1E1E1E;
     --button-text: #FFFFFF; 
 }
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
