@@ -14,6 +14,11 @@ align-items: flex-start;
 .logo{
     font-size: var(--font-header-size);
     padding: 10px;
-    font-weight: var(--font-header-weight8);
+    font-weight: var(--font-header-weight);
+    cursor: pointer;
 
+}
+.nav-bar-list div {
+   cursor: pointer;
+   
 }
