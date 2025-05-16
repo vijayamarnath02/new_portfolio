@@ -7,6 +7,10 @@
     --border-line:#E0E0E0;
     --card-background:#FFFFFF;
     --button-text:#FFFFFF;
+    --font-size-body:1rem;
+    --font-header-size:1.5rem;
+    --font-header-weight:900;
+    --font-family-body:'Outfit', sans-serif;
 }
 .dark-theme {
     --background-color: #121212;
@@ -22,4 +26,6 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: var(--font-size-body);
+    font-family: var(--font-family-body)
 }
