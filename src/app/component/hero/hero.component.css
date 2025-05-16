@@ -1,0 +1,40 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+.main{
+    flex: 1;
+        gap: 10px;
+        padding: 10px;
+        box-sizing: border-box;
+}
+.header{
+    color: var(--accent-primary);
+    font-size:4rem;
+}
+.hero-buttons{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+}
+.btn{
+ padding: 10px 20px;
+cursor: pointer;
+font-weight: var(--font-header-weight);
+border: 1px solid var(--card-background);
+border-radius: 10px;
+font-size: 1rem;
+background-color: var(--card-background);
+}
+.active{
+    background-color: var(--accent-primary);
+    color: var(--button-text);
+}
+.btn:hover{
+    background-color: var(--accent-hover);
+    color: var(--button-text);
+    transition: background-color 0.7s ease, color 0.7s ease;
+}

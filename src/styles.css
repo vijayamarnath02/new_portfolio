@@ -8,7 +8,7 @@
     --card-background: #FFFFFF;
     --button-text: #FFFFFF;
     --font-size-body: 1rem;
-    --font-header-size: 1.8rem;
+    --font-header-size: 2rem;
     --font-header-weight: 900;
     --font-family-body: 'Outfit', sans-serif; }
     
@@ -16,7 +16,7 @@
             --background-color: #121212;
             --primary-text: #EAEAEA;
             --secondary-text: #A0A0A0;
-            --accent-primary: #B388FF;
+            --accent-primary: #8a4fff;
             --accent-hover: #D1B3FF;
             --border-line: #2C2C2C;
             --card-background: #1E1E1E;
@@ -26,6 +26,7 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: var(--primary-text);
     font-size: var(--font-size-body);
     font-family: var(--font-family-body);
     background-color: var(--background-color);
