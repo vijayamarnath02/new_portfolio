@@ -24,17 +24,47 @@
  padding: 10px 20px;
 cursor: pointer;
 font-weight: var(--font-header-weight);
-border: 1px solid var(--card-background);
+border: 1px solid var(--border-line);
 border-radius: 10px;
 font-size: 1rem;
 background-color: var(--card-background);
+color: var(--primary-text);
 }
 .active{
     background-color: var(--accent-primary);
     color: var(--button-text);
 }
 .btn:hover{
-    background-color: var(--accent-hover);
+    background-color: var(--accent-primary);
     color: var(--button-text);
     transition: background-color 0.7s ease, color 0.7s ease;
 }
+.typing{
+   color: var(--secondary-text);
+}
+.social{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+    gap:10px
+}
+.social div{
+    background-color: var(--card-background);
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.social div fa-icon{
+font-size: var(--font-size-body);
+}
+.social div:hover {
+background-color: var(--accent-primary);
+color: var(--button-text);
+transform: scale(1.1);
+box-shadow: 0 4px 12px var(--accent-hover);
+
+}
+a {
+    all: unset;
+    cursor: pointer; }

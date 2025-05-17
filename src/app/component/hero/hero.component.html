@@ -16,14 +16,34 @@
                     <button class="btn active">View Projects</button>
                     <button class="btn" style="margin-left: 10px;">Contact Me</button>
                 </div>
+                <div class="social">
+                    <a [href]="userData.github">
+                        <div>
+                            <fa-icon [icon]="faGithub"></fa-icon>
+                        </div>
+                    </a>
+                    <a [href]="userData.linkedin">
+                        <div>
+                            <fa-icon [icon]="faLinkedin"></fa-icon>
+                        </div>
+                    </a>
+                    <a [href]="userData.phone">
+                        <div>
+                            <fa-icon [icon]="faPhone"></fa-icon>
+                        </div>
+                    </a>
+                    <a [href]="userData.email">
+                        <div>
+                            <fa-icon [icon]="faEnvelope"></fa-icon>
+                        </div>
+                    </a>
+                </div>
             </div>
-
         </div>
-
     </div>
     <div class="main">
         <div class="hero-image">
-            <!-- Optionally place an image or illustration here -->
+
         </div>
     </div>
 </div>
