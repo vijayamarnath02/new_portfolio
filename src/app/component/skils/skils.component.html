@@ -1,16 +1,18 @@
 <div class="container">
+
     <div class="header">
         <h2>My Skills</h2>
     </div>
-    <div class="wrapper">
+    <div class="scroll-container">
 
-        <div style="display: flex; gap: 10px;">
-            <div class="item">1</div>
-            <div class="item">2</div>
-            <div class="item">3</div>
-            <div class="item">4</div>
-            <div class="item">5</div>
-            <div class="item">6</div>
+        <div class="skills-cards">
+            <div class="skill-card" *ngFor="let skill of skills">
+                <div>
+                    <img [src]="skill.icon" width="100px" [alt]="skill.name" />
+                    <p>{{ skill.name }}</p>
+                </div>
+
+            </div>
         </div>
     </div>
 </div>
