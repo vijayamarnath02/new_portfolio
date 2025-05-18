@@ -1,0 +1,22 @@
+.container {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.header h2 {
+    font-size: 2rem;
+    padding: 15px 0;
+}
+
+
+
+.item {
+    min-width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    background-color: #ddd;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
