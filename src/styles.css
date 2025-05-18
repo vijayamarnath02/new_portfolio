@@ -10,7 +10,8 @@
     --font-size-body: 1rem;
     --font-header-size: 2rem;
     --font-header-weight: 900;
-    --font-family-body: 'Outfit', sans-serif; }
+    --font-family-body: 'Outfit', sans-serif; 
+--sub-heading-size:2.5rem;}
     
         .dark-theme {
             --background-color: #121212;

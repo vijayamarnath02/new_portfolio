@@ -62,7 +62,7 @@ font-size: var(--font-size-body);
 background-color: var(--accent-primary);
 color: var(--button-text);
 transform: scale(1.1);
-box-shadow: 0 4px 12px var(--accent-hover);
+
 
 }
 a {
