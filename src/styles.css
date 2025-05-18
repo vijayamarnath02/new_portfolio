@@ -36,3 +36,6 @@ body{
     height: 100dvh;
     transition: background-color 0.7s ease, color 0.7s ease;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
