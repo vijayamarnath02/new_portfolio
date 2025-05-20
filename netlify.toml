@@ -1,9 +1,11 @@
 [build]
-  command = "ng build"
-  functions = "netlify/functions"
+  command = "npm run build:ssr"
   publish = "dist/portfolio/browser"
 
 [[redirects]]
   from = "/*"
+  to = "/index.html"
   status = 200
-  to = "/index.csr.html"
+
+[[plugins]]
+  package = "@netlify/angular-runtime"
