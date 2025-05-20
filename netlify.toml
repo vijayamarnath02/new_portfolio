@@ -1,7 +1,7 @@
 [build]
-  command = "yarn build"
+  command = "ng build"
   functions = "netlify/functions"
-  publish = "dist/jobs-marketplace/browser"
+  publish = "dist/portfolio/browser"
 
 [[redirects]]
   from = "/*"
