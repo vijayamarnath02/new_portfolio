@@ -1,3 +1,7 @@
 [build]
-  command = "ng build --configuration production"
-  publish = "dist/portfolio"
+  command = "npm run build:ssr"
+  publish = "dist/portfolio/browser"
+  functions = "netlify/functions"
+
+[[plugins]]
+  package = "@netlify/angular-runtime"
