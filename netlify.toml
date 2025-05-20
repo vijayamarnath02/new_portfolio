@@ -1,7 +1,3 @@
 [build]
-  command = "npm run build"
+  command = "ng build --configuration production"
   publish = "dist/portfolio"
-
-# Override default plugins (disable automatic angular-runtime)
-[[plugins]]
-  package = "@netlify/plugin-sitemap" # or any dummy plugin to override
