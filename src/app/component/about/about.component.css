@@ -4,10 +4,13 @@
     align-items: center;
     flex-direction: row;
     width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .about-body>div {
     width: 50%;
+
   
    
 }
