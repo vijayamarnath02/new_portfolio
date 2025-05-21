@@ -42,3 +42,16 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 h2 {
     font-size: var(--sub-heading-size);
 }
+
+.gradient {
+    background: linear-gradient(to right,var(--accent-primary), var(--accent-hover));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+.gradient-text {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--primary-text);
+     }
