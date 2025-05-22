@@ -1,20 +1,22 @@
-<div class="skills-section">
-    <div class="header">
-        <h2 class="gradient-text">Technical <span class="gradient">Skills</span></h2>
-        <p>
-            Through my experience with Angular development, I've gained proficiency in various technologies <br>and
-            tools.
-            Here's an
-            overview of my technical expertise.
-        </p>
-    </div>
+<div class="container">
+    <div class="skills-section">
+        <div class="header">
+            <h2 class="gradient-text">Technical <span class="gradient">Skills</span></h2>
+            <p>
+                Through my experience with Angular development, I've gained proficiency in various technologies <br>and
+                tools.
+                Here's an
+                overview of my technical expertise.
+            </p>
+        </div>
 
-    <div class="scroll-container">
-        <div class="skills-cards">
-            <div class="skill-card" *ngFor="let skill of skills">
-                <div>
-                    <img [src]="skill.icon" width="100px" [alt]="skill.name" />
-                    <p>{{ skill.name }}</p>
+        <div class="scroll-container">
+            <div class="skills-cards">
+                <div class="skill-card" *ngFor="let skill of skills">
+                    <div>
+                        <img [src]="skill.icon" width="100px" [alt]="skill.name" />
+                        <p>{{ skill.name }}</p>
+                    </div>
                 </div>
             </div>
         </div>

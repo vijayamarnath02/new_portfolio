@@ -1,8 +1,8 @@
 /* skills.component.scss */
 .skills-section {
-    padding: 40px 20px;
+ 
     max-width: 1200px;
-    margin: 0 auto;
+
 }
 .header {
     text-align: center;
@@ -24,7 +24,7 @@
     gap: 1.5rem;
     /* Space between cards */
     text-align: center;
-    padding: 2rem;
+margin: 20px 0px;
 }
 
 .skill-card {
