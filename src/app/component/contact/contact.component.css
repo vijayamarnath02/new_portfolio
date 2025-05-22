@@ -1,0 +1,114 @@
+.header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.header p {
+    max-width: 700px;
+    margin-top: 1rem;
+    color: var(--secondary-text);
+    line-height: 1.6;
+}
+.main-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+flex-wrap: wrap;
+flex-direction: row;
+gap: 20px;
+
+}
+.content {
+    flex: 1;
+}
+.card{
+    background-color: var(--background-color);
+        color: var(--primary-text);
+        font-family: var(--font-family-body);
+        padding: 2rem;
+        border-radius: 1rem;
+        box-shadow: var(--box-shadow);
+        max-width: 500px;
+}
+.custom-button {
+  background-color: var(--accent-primary);
+  color: var(--button-text);
+  font-size: var(--font-size-body);
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custom-button:hover {
+  background-color: var(--accent-hover);
+}
+
+.custom-button:disabled {
+  background-color: var(--border-line);
+  cursor: not-allowed;
+  color: var(--secondary-text);
+}
+.contact-section {
+    font-family: var(--font-family-body);
+
+}
+
+.section-title {
+    font-size: var(--sub-heading-size);
+    font-weight: var(--font-header-weight);
+    color: var(--accent-primary);
+    margin-bottom: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.icon {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    color: var(--accent-primary);
+}
+
+.label {
+    font-weight: bold;
+    color: var(--secondary-text);
+    font-size: 0.9rem;
+}
+
+.value {
+    font-size: 1rem;
+    color: var(--primary-text);
+}
+
+.section-subtitle {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-text);
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-icons .icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.social-icons .icon:hover {
+    color: var(--accent-hover);
+}

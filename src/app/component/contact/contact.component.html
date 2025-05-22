@@ -1,1 +1,95 @@
-<p>contact works!</p>
+<div class="container">
+    <div class="header">
+        <h2 class="gradient-text">Get In <span class="gradient">Touch</span></h2>
+        <div>
+            <p>
+                Feel free to reach out if you'd like to work together, have a question, or just want to connect.
+            </p>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="content">
+            <div class="card">
+                <div style="padding: 20px;box-sizing: border-box;">
+                    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()"
+                        style="display: flex; flex-direction: column; gap: 1rem;">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Name</mat-label>
+                            <input matInput formControlName="name" />
+                            <mat-error *ngIf="contactForm.get('name')?.hasError('required')">
+                                Name is required
+                            </mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="outline">
+                            <mat-label>Email</mat-label>
+                            <input matInput type="email" formControlName="email" />
+                            <mat-error *ngIf="contactForm.get('email')?.hasError('required')">
+                                Email is required
+                            </mat-error>
+                            <mat-error *ngIf="contactForm.get('email')?.hasError('email')">
+                                Enter a valid email
+                            </mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="outline">
+                            <mat-label>Subject</mat-label>
+                            <input matInput formControlName="subject" />
+                            <mat-error *ngIf="contactForm.get('subject')?.hasError('required')">
+                                Subject is required
+                            </mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="outline">
+                            <mat-label>Message</mat-label>
+                            <textarea matInput rows="5" formControlName="message"></textarea>
+                            <mat-error *ngIf="contactForm.get('message')?.hasError('required')">
+                                Message is required
+                            </mat-error>
+                        </mat-form-field>
+
+                        <button type="submit" [disabled]="contactForm.invalid" class="custom-button">
+                            Send </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="contact-section">
+                <h2 class="section-title">Contact Information</h2>
+
+                <div class="contact-item">
+                    <span class="icon">📧</span>
+                    <div>
+                        <div class="label">Email</div>
+                        <div class="value">vijay.amarnathexampl.com</div>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <span class="icon">📞</span>
+                    <div>
+                        <div class="label">Phone</div>
+                        <div class="value">+1 (234) 567-890</div>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <span class="icon">📍</span>
+                    <div>
+                        <div class="label">Location</div>
+                        <div class="value">Bangalore, India</div>
+                    </div>
+                </div>
+
+                <h3 class="section-subtitle">Connect With Me</h3>
+                <div class="social-icons">
+                    <span class="icon">🔗</span>
+                    <span class="icon">🐙</span>
+                    <span class="icon">✉️</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
