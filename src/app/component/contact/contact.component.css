@@ -19,6 +19,10 @@
 flex-wrap: wrap;
 flex-direction: row;
 gap: 20px;
+animation: identifier linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+
 
 }
 .content {

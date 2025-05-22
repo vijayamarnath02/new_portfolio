@@ -63,6 +63,9 @@
     margin-top: 50px;
     box-sizing: border-box;
     height: 400px;
+    animation: identifierright linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
 
     &:hover {
         transform: translateY(-5px) scale(1.02);
@@ -137,6 +140,7 @@
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
+    
 }
 
 .description {

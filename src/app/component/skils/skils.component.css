@@ -38,6 +38,9 @@ margin: 20px 0px;
     background: var(--card-background);
     transition: transform 0.2s;
     cursor: pointer;
+    animation: identifier linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
 }
 
 .skill-card:hover {
