@@ -4,11 +4,15 @@
     max-width: 1200px;
     margin: 0 auto;
 }
-
+.header {
+    text-align: center;
+}
 .header h2 {
     position: relative;
-    font-size: 2rem;
-    padding: 15px 30px;
+    margin: 0 auto;
+}
+.header p{
+    color: var(--secondary-text);
 }
 .skills-cards {
     display: flex;
@@ -48,4 +52,7 @@
 }
 p{
     color: var(--secondary-text);
+}
+.container{
+    background-color: var(--card-background);
 }
