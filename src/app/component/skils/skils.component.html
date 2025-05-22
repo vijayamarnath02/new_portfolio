@@ -14,8 +14,13 @@
             <div class="skills-cards">
                 <div class="skill-card" *ngFor="let skill of skills">
                     <div>
-                        <img [src]="skill.icon" width="100px" [alt]="skill.name" />
-                        <p>{{ skill.name }}</p>
+                        <div style="height: 50%;align-items: center;text-align: center;justify-content: center;">
+                            <img [src]="skill.icon" width="100px" [alt]="skill.name" />
+                        </div>
+                        <div
+                            style="height: 50%;align-items:end;text-align: center;margin-top: 25px;font-weight: bolder;">
+                            <p>{{ skill.name }}</p>
+                        </div>
                     </div>
                 </div>
             </div>

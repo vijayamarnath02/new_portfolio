@@ -11,7 +11,8 @@
     --font-header-size: 2rem;
     --font-header-weight: 900;
     --font-family-body: 'Outfit', sans-serif; 
---sub-heading-size:2.5rem;}
+--sub-heading-size:2.5rem;
+--box-shadow:0 0 10px rgba(0, 0, 0, 0.1);}
     
         .dark-theme {
             --background-color: #121212;
@@ -22,6 +23,7 @@
             --border-line: #2C2C2C;
             --card-background: #1E1E1E;
             --button-text: #FFFFFF;
+            --box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
         }
 body{
     margin: 0;
