@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-skils',
   imports: [
-    CommonModule],
+    CommonModule, MatTooltipModule],
   templateUrl: './skils.component.html',
   styleUrl: './skils.component.css'
 })

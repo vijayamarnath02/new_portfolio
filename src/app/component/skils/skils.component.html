@@ -13,7 +13,7 @@
 
     <div class="skills-cards">
         <div class="skill-card" *ngFor="let skill of skills">
-            <div>
+            <div [matTooltip]="skill.name">
                 <div style="height: 50%;align-items: center;text-align: center;justify-content: center;">
                     <img [src]="skill.icon" width="100px" [alt]="skill.name" />
                 </div>
