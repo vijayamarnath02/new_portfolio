@@ -113,7 +113,7 @@ gap: 20px;
     color: var(--accent-hover);
 }
 .container{
-    animation: identifier linear;
+    animation: identifierright linear;
         animation-timeline: view();
-        animation-range: entry 0% cover 40%;
+        animation-range: entry 0% cover 50%;
 }
