@@ -1,8 +1,6 @@
 /* skills.component.scss */
 .skills-section {
- 
     max-width: 1200px;
-
 }
 .header {
     text-align: center;
@@ -21,7 +19,6 @@
     justify-content: space-around;
     
     align-items: center;
-    /* Vertical centering if container has a height */
     gap: 1.5rem;
     /* Space between cards */
     text-align: center;
@@ -57,4 +54,7 @@ p{
 .container{
     margin-top: 20px;
     box-sizing: border-box;
+}
+.scroll-container{
+    width: 100%;
 }
