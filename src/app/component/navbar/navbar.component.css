@@ -8,9 +8,11 @@
 }
 
 .logo {
+    background: linear-gradient(to right, var(--accent-primary), var(--accent-hover));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size: var(--font-header-size);
     font-weight: var(--font-header-weight);
-    color: var(--accent-primary);
     cursor: pointer;
 }
 

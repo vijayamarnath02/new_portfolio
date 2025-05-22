@@ -12,9 +12,15 @@
         gap: 10px;
         padding: 10px;
         box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
 }
 .header{
-    color: var(--accent-primary);
+    background: linear-gradient(to right, var(--accent-primary), var(--accent-hover));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size:4rem;
 }
 .hero-buttons{
