@@ -30,7 +30,7 @@ gap: 20px;
         font-family: var(--font-family-body);
         padding: 2rem;
         border-radius: 1rem;
-        box-shadow: var(--box-shadow);
+        box-shadow: var(--box-shadow) ;
         max-width: 85%;
 }
 .custom-button {
@@ -41,7 +41,7 @@ gap: 20px;
   padding: 0.75rem 1.5rem;
   border: none;
   border-radius: 8px;
-  box-shadow: var(--box-shadow);
+  box-shadow: var(--box-shadow) inset;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -111,4 +111,9 @@ gap: 20px;
 
 .social-icons .icon:hover {
     color: var(--accent-hover);
+}
+.container{
+    animation: identifier linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
 }

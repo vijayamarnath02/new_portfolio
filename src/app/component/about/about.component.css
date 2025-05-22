@@ -73,4 +73,7 @@ fa-icon {
 }
 .container {
     background-color: var(--card-background);
+    animation: identifier linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
 }

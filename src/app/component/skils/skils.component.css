@@ -37,10 +37,12 @@ margin: 20px 0px;
     box-shadow: var(--box-shadow);
     background: var(--card-background);
     transition: transform 0.2s;
+    cursor: pointer;
 }
 
 .skill-card:hover {
     transform: scale(1.05);
+    box-shadow: var(--box-shadow) inset;
 }
 
 .skill-card img {
@@ -54,6 +56,9 @@ p{
 .container{
     margin-top: 20px;
     box-sizing: border-box;
+    animation: identifier linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
 }
 .scroll-container{
     width: 100%;

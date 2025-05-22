@@ -32,7 +32,7 @@
     font-size: 0.875rem;
     cursor: pointer;
     transition: background-color 0.3s;
-    box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow) ;
     user-select: none;
     text-align: center;
     font-weight: 500;
@@ -41,6 +41,7 @@
 .custom-chip:hover {
     background-color: var(--accent-primary);
     color: var(--background-color);
+    box-shadow: var(--box-shadow) inset;
     width: 110px;
 }
 .active{
@@ -52,7 +53,7 @@
     color: var(--primary-text);
     border-radius: 1rem;
     overflow: hidden;
-    box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow) ;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     max-width: 350px;
     margin: 1rem auto;
@@ -65,7 +66,7 @@
 
     &:hover {
         transform: translateY(-5px) scale(1.02);
-        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15) inset;
     }
 }
 
@@ -127,6 +128,9 @@
 }
 .container{
     background-color: var(--card-background);
+    animation: identifier linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
 }
 .card-content{
     display: flex;
