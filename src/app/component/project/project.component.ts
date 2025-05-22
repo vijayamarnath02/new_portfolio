@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-
+import { MatChipsModule } from '@angular/material/chips';
 @Component({
   selector: 'app-project',
-  imports: [],
+  imports: [MatChipsModule],
   templateUrl: './project.component.html',
   styleUrl: './project.component.css'
 })
