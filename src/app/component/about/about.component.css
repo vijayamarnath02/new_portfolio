@@ -71,3 +71,6 @@ h3 {
 fa-icon {
     color: var(--accent-primary);
 }
+.container {
+    background-color: var(--card-background);
+}

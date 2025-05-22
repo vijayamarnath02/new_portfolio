@@ -54,5 +54,5 @@ p{
     color: var(--secondary-text);
 }
 .container{
-    background-color: var(--card-background);
+    margin-top: 20px;
 }
