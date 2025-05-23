@@ -38,7 +38,7 @@ body{
     height: 100dvh;
     height: 100lvh;
     height: 100svh;
-    transition: background-color 0.7s ease, color 0.7s ease;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 html, body { height: 100%; }

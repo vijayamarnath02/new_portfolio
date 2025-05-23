@@ -12,13 +12,16 @@ import { THEME } from '../../../constents';
 export class NavbarComponent implements OnInit {
   faSun = faSun;
   faMoon = faMoon;
-  isDarkMode = localStorage.getItem(THEME) === "dark" ? false : true;
+  isDarkMode: boolean = false;
   animate: 'positive' | 'negative' | null = null;
   ngOnInit(): void {
     this.toggleTheme();
   }
   toggleTheme() {
-    this.isDarkMode = !this.isDarkMode;
+    const savedTheme = localStorage.getItem('THEME');
+    this.isDarkMode = savedTheme
+      ? savedTheme === 'dark'
+      : window.matchMedia('(prefers-color-scheme: dark)').matches;;
     this.animate = this.isDarkMode ? 'positive' : 'negative';
     var theme = this.isDarkMode ? "dark" : "light"
     localStorage.setItem(THEME, theme);
