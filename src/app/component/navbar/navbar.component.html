@@ -1,29 +1,27 @@
-<nav style="width: 100%;box-sizing: border-box;">
+<nav style="width: 100%; box-sizing: border-box;">
     <div class="content">
         <div class="logo">
             VA
         </div>
-        <div class="nav-bar-list">
-            <div>
-                Home
-            </div>
-            <div>
-                About
-            </div>
-            <div>
-                Skills
-            </div>
-            <div>
-                Projects
-            </div>
-            <div>
-                Resume
-            </div>
-            <div>
-                Contact
-            </div>
-            <div class="icon" (click)="toggleTheme()" [ngClass]="{ 'rotate-positive': animate === 'positive',
-       'rotate-negative': animate === 'negative' }">
+
+        <!-- Hamburger Icon -->
+        <div class="hamburger-icon" (click)="toggleMenu()" *ngIf="menuOpen">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+
+        <!-- Navigation List -->
+        <div class="nav-bar-list" [class.open]="menuOpen" *ngIf="!menuOpen">
+            <div>Home</div>
+            <div>About</div>
+            <div>Skills</div>
+            <div>Projects</div>
+            <div>Resume</div>
+            <div>Contact</div>
+
+            <div class="icon" (click)="toggleTheme()"
+                [ngClass]="{ 'rotate-positive': animate === 'positive', 'rotate-negative': animate === 'negative' }">
                 <fa-icon [icon]="isDarkMode ? faMoon : faSun"
                     [ngStyle]="{ color: isDarkMode ? 'var(--accent-primary)' : 'inherit' }"></fa-icon>
             </div>

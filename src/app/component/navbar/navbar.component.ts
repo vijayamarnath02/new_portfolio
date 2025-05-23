@@ -16,6 +16,7 @@ export class NavbarComponent implements OnInit {
   faMoon = faMoon;
   isDarkMode: boolean = false;
   animate: 'positive' | 'negative' | null = null;
+  menuOpen = false;
 
   ngOnInit(): void {
     const savedTheme = localStorage.getItem(THEME);
@@ -37,7 +38,9 @@ export class NavbarComponent implements OnInit {
       this.animate = null;
     }, 600);
   }
-
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
   private applyTheme(): void {
     document.body.classList.toggle('dark-theme', this.isDarkMode);
   }
