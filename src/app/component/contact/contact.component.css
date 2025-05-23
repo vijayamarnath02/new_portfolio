@@ -21,7 +21,7 @@ flex-direction: row;
 gap: 20px;
 animation: identifier linear;
     animation-timeline: view();
-    animation-range: entry 0% cover 40%;
+    animation-range: entry 0% cover 30%;
 
 
 }
@@ -119,5 +119,5 @@ animation: identifier linear;
 .container{
     animation: identifierright linear;
         animation-timeline: view();
-        animation-range: entry 0% cover 40%;
+        animation-range: entry 0% cover 30%;
 }

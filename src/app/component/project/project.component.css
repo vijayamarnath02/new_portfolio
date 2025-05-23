@@ -65,7 +65,7 @@
     height: 400px;
     animation: identifierright linear;
         animation-timeline: view();
-        animation-range: entry 0% cover 40%;
+        animation-range: entry 0% cover 30%;
 
     &:hover {
         transform: translateY(-5px) scale(1.02);
@@ -133,7 +133,7 @@
     background-color: var(--card-background);
     animation: identifier linear;
         animation-timeline: view();
-        animation-range: entry 0% cover 40%;
+        animation-range: entry 0% cover 30%;
 }
 .card-content{
     display: flex;

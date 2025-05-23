@@ -40,7 +40,7 @@ margin: 20px 0px;
     cursor: pointer;
     animation: identifier linear;
         animation-timeline: view();
-        animation-range: entry 0% cover 40%;
+        animation-range: entry 0% cover 30%;
 }
 
 .skill-card:hover {
@@ -61,7 +61,7 @@ p{
     box-sizing: border-box;
     animation: identifierright linear;
         animation-timeline: view();
-        animation-range: entry 0% cover 40%;
+        animation-range: entry 0% cover 30%;
 }
 .scroll-container{
     width: 100%;
