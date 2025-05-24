@@ -41,7 +41,7 @@ export class ChatboatComponent {
     setTimeout(() => {
       const dialogRef = this.dialog.open(ResumeDownloadDialogComponent, {
         width: '90vw',
-        height: '90vh',
+        height: '85vh',
       });
 
       dialogRef.afterClosed().subscribe(() => {
@@ -49,7 +49,9 @@ export class ChatboatComponent {
       });
     }, 600); // short delay (in ms) to avoid blocking download
   }
-
+  isMobileView(): boolean {
+    return window.innerWidth <= 768;
+  }
 
   hidePopup() {
     this.showPopup = false;
