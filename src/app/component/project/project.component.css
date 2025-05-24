@@ -40,13 +40,13 @@
 
 .custom-chip:hover {
     background-color: var(--accent-primary);
-    color: var(--background-color);
+    color: var(--primary-text);
     box-shadow: var(--box-shadow) inset;
     width: 110px;
 }
 .active{
     background-color: var(--accent-primary);
-        color: var(--background-color);
+        color: var(--primary-text);
 }
 .project-card {
     background-color: var(--card-background);
