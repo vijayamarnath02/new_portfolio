@@ -37,12 +37,22 @@ export class ChatboatComponent {
     link.download = 'My_Resume.pdf';
     link.click();
 
-    // Delay opening the dialog to allow the download to begin
+
     setTimeout(() => {
-      const dialogRef = this.dialog.open(ResumeDownloadDialogComponent, {
-        width: '90vw',
-        height: '85vh',
-      });
+      let dialogRef;
+      if (this.isMobileView()) {
+        dialogRef = this.dialog.open(ResumeDownloadDialogComponent, {
+          width: '90vw',
+          height: '85vh',
+        });
+      }
+      else {
+        dialogRef = this.dialog.open(ResumeDownloadDialogComponent, {
+          width: '90vw',
+          height: '95vh',
+        });
+      }
+
 
       dialogRef.afterClosed().subscribe(() => {
         this.isDialogOpen = false;
