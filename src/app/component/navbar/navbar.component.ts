@@ -45,6 +45,7 @@ export class NavbarComponent implements OnInit {
   private applyTheme(): void {
     document.body.classList.toggle('dark-theme', this.isDarkMode);
   }
+
   navigateTo(sectionId: string) {
     this.activeSection = sectionId;
     const element = document.getElementById(sectionId);
