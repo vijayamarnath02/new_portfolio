@@ -42,8 +42,8 @@ export class ChatboatComponent {
       let dialogRef;
       if (this.isMobileView()) {
         dialogRef = this.dialog.open(ResumeDownloadDialogComponent, {
-          width: '90vw',
-          height: '85vh',
+          width: '100vw',
+          height: '600px',
         });
       }
       else {
