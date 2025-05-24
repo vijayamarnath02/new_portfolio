@@ -1,3 +1,19 @@
+<!-- Fixed Chat Button -->
 <button class="chat-button" (click)="openResumeDialog()">
     <fa-icon [icon]="faDownload" style="font-size: 1.5rem;"></fa-icon>
 </button>
+<!-- Timed Popup (Appears near the chat button) -->
+<div *ngIf="showPopup" class="resume-popup">
+    <button class="popup-close" (click)="hidePopup()">×</button>
+    <div class="popup-header">
+        <i class="fas fa-cloud-download-alt icon"></i>
+        <h4>Download Resume</h4>
+    </div>
+    <p class="popup-message">
+        Get my latest resume with all my skills, experience, and contact information.
+    </p>
+    <div class="popup-action" (click)="openResumeDialog()">
+        <i class="fas fa-file-pdf"></i>
+        <span>Download PDF</span>
+    </div>
+</div>
