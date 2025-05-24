@@ -42,14 +42,14 @@ export class ChatboatComponent {
       let dialogRef;
       if (this.isMobileView()) {
         dialogRef = this.dialog.open(ResumeDownloadDialogComponent, {
-          width: '100vw',
-          height: '600px',
+          width: '90vw',
+
         });
       }
       else {
         dialogRef = this.dialog.open(ResumeDownloadDialogComponent, {
           width: '90vw',
-          height: '95vh',
+
         });
       }
 
