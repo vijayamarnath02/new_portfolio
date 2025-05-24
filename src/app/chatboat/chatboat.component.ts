@@ -47,7 +47,7 @@ export class ChatboatComponent {
       dialogRef.afterClosed().subscribe(() => {
         this.isDialogOpen = false;
       });
-    }, 300); // short delay (in ms) to avoid blocking download
+    }, 600); // short delay (in ms) to avoid blocking download
   }
 
 
