@@ -185,15 +185,9 @@
 }
 
 @media (max-width: 480px) {
-    .thank-you-container {
-        padding: 2rem;
-        margin: 1rem;
-    }
-
     .action-buttons {
         flex-direction: column;
     }
-
     .btn {
         width: 100%;
         justify-content: center;
