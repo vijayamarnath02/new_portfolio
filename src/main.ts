@@ -1,4 +1,3 @@
-import { isDevMode } from '@angular/core';
 import { bootstrapApplication } from '@angular/platform-browser';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { AppComponent } from './app/app.component';
@@ -9,7 +8,7 @@ bootstrapApplication(AppComponent, {
     ...appConfig.providers,
     // Add service worker
     ServiceWorkerModule.register('ngsw-worker.js', {
-      enabled: !isDevMode(),
+      enabled: true,
       registrationStrategy: 'registerWhenStable:30000'
     }).providers || []
   ]
