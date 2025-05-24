@@ -22,4 +22,14 @@ export class ResumeDownloadDialogComponent {
   close() {
     this.dialogRef.close();
   }
+  downloadResume() {
+    const link = document.createElement('a');
+    link.href = 'assets/resume.pdf'; // replace with actual file path
+    link.download = 'My_Resume.pdf';
+    link.click();
+  }
+
+  reloadPage() {
+    window.location.reload();
+  }
 }

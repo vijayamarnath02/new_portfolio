@@ -1,6 +1,9 @@
+<!-- Fixed Chat Button -->
 <button class="chat-button" (click)="openResumeDialog()">
     <fa-icon [icon]="faDownload" style="font-size: 1.5rem;"></fa-icon>
 </button>
+
+<!-- Timed Popup -->
 <div *ngIf="showPopup" class="resume-popup">
     <button class="popup-close" (click)="hidePopup()">×</button>
     <div class="popup-header">

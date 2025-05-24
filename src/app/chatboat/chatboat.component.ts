@@ -15,16 +15,29 @@ import { ResumeDownloadDialogComponent } from '../resume-download-dialog/resume-
 export class ChatboatComponent {
   faDownload = faDownload;
   showPopup = false;
+  isDialogOpen = false;
 
-  constructor(private dialog: MatDialog) {
+  constructor(private dialog: MatDialog) { }
+
+  ngOnInit() {
     setTimeout(() => {
-      this.showPopup = true;
-    }, 5000); // show popup after 5 seconds
+      if (!this.isDialogOpen) {
+        this.showPopup = true;
+      }
+    }, 5000);
   }
 
   openResumeDialog() {
-    this.dialog.open(ResumeDownloadDialogComponent);
-    this.showPopup = false; // optionally close popup when opened
+    this.isDialogOpen = true;
+    this.showPopup = false;
+    const dialogRef = this.dialog.open(ResumeDownloadDialogComponent, {
+      width: '60%',
+      height: '98%',
+    });
+
+    dialogRef.afterClosed().subscribe(() => {
+      this.isDialogOpen = false;
+    });
   }
 
   hidePopup() {

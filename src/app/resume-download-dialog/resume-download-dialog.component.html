@@ -1,6 +1,6 @@
 <div class="thank-you-container">
     <div class="success-icon">
-        <fa-icon [icon]="faThumbsUp" style="font-size: 2rem;color: white;"></fa-icon>
+        <fa-icon [icon]="faThumbsUp" style="font-size: 2rem; color: white;"></fa-icon>
     </div>
 
     <h1 class="thank-you-title">Thank You!</h1>
@@ -15,5 +15,15 @@
             Download Complete
         </h3>
         <p>The resume file has been saved to your downloads folder</p>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="action-buttons">
+        <button class="btn btn-primary" (click)="downloadResume()">
+            <i class="fas fa-redo-alt"></i> Download Again
+        </button>
+        <button class="btn btn-secondary" (click)="reloadPage()">
+            <i class="fas fa-sync"></i> Reload Page
+        </button>
     </div>
 </div>
