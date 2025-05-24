@@ -30,15 +30,26 @@ export class ChatboatComponent {
   openResumeDialog() {
     this.isDialogOpen = true;
     this.showPopup = false;
-    const dialogRef = this.dialog.open(ResumeDownloadDialogComponent, {
-      width: '60%',
-      height: '98%',
-    });
 
-    dialogRef.afterClosed().subscribe(() => {
-      this.isDialogOpen = false;
-    });
+    // Trigger file download
+    const link = document.createElement('a');
+    link.href = 'assets/resume.pdf';
+    link.download = 'My_Resume.pdf';
+    link.click();
+
+    // Delay opening the dialog to allow the download to begin
+    setTimeout(() => {
+      const dialogRef = this.dialog.open(ResumeDownloadDialogComponent, {
+        width: '60%',
+        height: 'auto',
+      });
+
+      dialogRef.afterClosed().subscribe(() => {
+        this.isDialogOpen = false;
+      });
+    }, 300); // short delay (in ms) to avoid blocking download
   }
+
 
   hidePopup() {
     this.showPopup = false;
