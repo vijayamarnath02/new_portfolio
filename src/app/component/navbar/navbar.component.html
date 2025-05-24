@@ -4,29 +4,18 @@
             VA
         </div>
         <div class="nav-bar-list">
-            <div>
-                Home
-            </div>
-            <div>
-                About
-            </div>
-            <div>
-                Skills
-            </div>
-            <div>
-                Projects
-            </div>
-            <div>
-                Resume
-            </div>
-            <div>
-                Contact
-            </div>
-            <div class="icon" (click)="toggleTheme()" [ngClass]="{ 'rotate-positive': animate === 'positive',
-       'rotate-negative': animate === 'negative' }">
+            <div [class.active]="activeSection === 'home'" (click)="navigateTo('home')">Home</div>
+            <div [class.active]="activeSection === 'about'" (click)="navigateTo('about')">About</div>
+            <div [class.active]="activeSection === 'skills'" (click)="navigateTo('skills')">Skills</div>
+            <div [class.active]="activeSection === 'projects'" (click)="navigateTo('projects')">Projects</div>
+            <div [class.active]="activeSection === 'contact'" (click)="navigateTo('contact')">Contact</div>
+
+            <div class="icon" (click)="toggleTheme()"
+                [ngClass]="{ 'rotate-positive': animate === 'positive', 'rotate-negative': animate === 'negative' }">
                 <fa-icon [icon]="isDarkMode ? faMoon : faSun"
                     [ngStyle]="{ color: isDarkMode ? 'var(--accent-primary)' : 'inherit' }"></fa-icon>
             </div>
         </div>
+
     </div>
 </nav>

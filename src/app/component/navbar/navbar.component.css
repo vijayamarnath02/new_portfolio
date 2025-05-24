@@ -62,3 +62,13 @@
         transform: rotate(-360deg);
     } }
     
+        .nav-bar-list div {
+            cursor: pointer;
+            transition: color 0.3s, border-bottom 0.3s;
+        }
+    
+        .nav-bar-list div.active {
+            color: var(--accent-primary);
+            border-bottom: 2px solid var(--accent-primary);
+            font-weight: bold;
+        }
