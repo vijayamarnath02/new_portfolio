@@ -1,8 +1,7 @@
-nav {
-    width: 100%;
-    box-sizing: border-box;
+nav{
     z-index: 1000;
-    position: static;}
+    position: fixed; 
+}
 .content {
     display: flex;
     justify-content: space-between;
@@ -13,15 +12,11 @@ nav {
    }
 /* Sticky ONLY on desktop */
 @media (min-width: 769px) {
-    nav {
-        position: fixed;
+    .content {
+        position: sticky;
         top: 0;
     }
-
-    .content {
-        position: static;
-      
-    } }
+}
 
 .logo {
     background: linear-gradient(to right, var(--accent-primary), var(--accent-hover));
