@@ -23,10 +23,7 @@ export class ChatboatComponent {
   }
 
   openResumeDialog() {
-    this.dialog.open(ResumeDownloadDialogComponent, {
-      height: '500px',
-      width: '600px',
-    });
+    this.dialog.open(ResumeDownloadDialogComponent);
     this.showPopup = false; // optionally close popup when opened
   }
 
