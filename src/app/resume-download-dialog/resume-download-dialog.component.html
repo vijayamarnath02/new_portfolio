@@ -10,7 +10,7 @@
 
     <div class="download-info">
         <h3>
-            <i class="fas fa-file-download"></i>
+            <fa-icon [icon]="faFileDownload"></fa-icon>
             Download Complete
         </h3>
         <p>The resume file has been saved to your downloads folder.</p>
@@ -18,10 +18,10 @@
 
     <div class="action-buttons">
         <button class="btn btn-primary" (click)="downloadResume()">
-            <i class="fas fa-redo-alt"></i> Download Again
+            <fa-icon [icon]="faRedoAlt"></fa-icon> Download Again
         </button>
         <button class="btn btn-secondary" (click)="reloadPage()">
-            <i class="fas fa-sync"></i> Reload Page
+            <fa-icon [icon]="faSync"></fa-icon>Reload Page
         </button>
     </div>
 </div>

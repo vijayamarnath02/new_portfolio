@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
+import { faFileDownload, faRedoAlt, faSync, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-resume-download-dialog',
   standalone: true,
@@ -16,6 +16,9 @@ import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 export class ResumeDownloadDialogComponent {
   resumeUrl = 'assets/resume.pdf';
   faThumbsUp = faThumbsUp;
+  faFileDownload = faFileDownload;
+  faRedoAlt = faRedoAlt;
+  faSync = faSync;
 
   constructor(private dialogRef: MatDialogRef<ResumeDownloadDialogComponent>) { }
 
