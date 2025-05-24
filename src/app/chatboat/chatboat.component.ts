@@ -40,8 +40,8 @@ export class ChatboatComponent {
     // Delay opening the dialog to allow the download to begin
     setTimeout(() => {
       const dialogRef = this.dialog.open(ResumeDownloadDialogComponent, {
-        width: '600px',
-        height: '550px',
+        width: '90vw',
+        height: '90vh',
       });
 
       dialogRef.afterClosed().subscribe(() => {
