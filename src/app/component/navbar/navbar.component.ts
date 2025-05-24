@@ -18,6 +18,7 @@ export class NavbarComponent implements OnInit {
   animate: 'positive' | 'negative' | null = null;
   menuOpen = false;
   activeSection: string = 'home';
+  mobileMenuOpen = false;
 
   ngOnInit(): void {
     const savedTheme = localStorage.getItem(THEME);
@@ -48,9 +49,15 @@ export class NavbarComponent implements OnInit {
 
   navigateTo(sectionId: string) {
     this.activeSection = sectionId;
+    this.mobileMenuOpen = false;
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
+
+  }
+
+  toggleMobileMenu() {
+    this.mobileMenuOpen = !this.mobileMenuOpen;
   }
 }

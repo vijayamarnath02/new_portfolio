@@ -1,9 +1,14 @@
-<nav style="width: 100%;box-sizing: border-box;">
+<nav style="width: 100%; box-sizing: border-box;">
     <div class="content">
-        <div class="logo">
-            VA
+        <div class="logo">VA</div>
+
+        <!-- Hamburger icon -->
+        <div class="hamburger" (click)="toggleMobileMenu()">
+            &#9776;
         </div>
-        <div class="nav-bar-list">
+
+        <!-- Nav list -->
+        <div class="nav-bar-list" [class.show]="mobileMenuOpen">
             <div [class.active]="activeSection === 'home'" (click)="navigateTo('home')">Home</div>
             <div [class.active]="activeSection === 'about'" (click)="navigateTo('about')">About</div>
             <div [class.active]="activeSection === 'skills'" (click)="navigateTo('skills')">Skills</div>
@@ -16,6 +21,5 @@
                     [ngStyle]="{ color: isDarkMode ? 'var(--accent-primary)' : 'inherit' }"></fa-icon>
             </div>
         </div>
-
     </div>
 </nav>
