@@ -12,13 +12,15 @@
         </div>
     </div>
     <div class="chip-container">
-        <span class="custom-chip active">All</span>
-        <span class="custom-chip">Angular</span>
-        <span class="custom-chip">TypeScript</span>
-        <span class="custom-chip">Node.js</span>
+        <span class="custom-chip" [class.active]="selectedTech === 'All'" (click)="filterProjects('All')">All</span>
+
+        <span class="custom-chip" *ngFor="let tech of uniqueTechnologies" [class.active]="selectedTech === tech"
+            (click)="filterProjects(tech)">
+            {{ tech }}
+        </span>
     </div>
     <div class="card-content">
-        <div class="project-card" *ngFor="let project of projects">
+        <div class="project-card" *ngFor="let project of filteredProjects">
             <div class="project-image" [style.backgroundImage]="'url(' + project.image + ')'"></div>
             <div class="project-content">
                 <h3>{{ project.title }}</h3>

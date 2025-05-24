@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatTooltipModule } from '@angular/material/tooltip';
 @Component({
   selector: 'app-project',
@@ -7,7 +7,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
   templateUrl: './project.component.html',
   styleUrl: './project.component.css'
 })
-export class ProjectComponent {
+export class ProjectComponent implements OnInit {
+  selectedTech = 'All';
   projects = [
     {
       id: 1,
@@ -70,4 +71,23 @@ export class ProjectComponent {
       githubUrl: "https://github.com/example/project6"
     }
   ];
+  filteredProjects: any = [];
+  uniqueTechnologies: string[] = ['Angular', 'TypeScript', 'Node.js', 'React'];
+
+  ngOnInit(): void {
+
+    this.filterProjects('All');
+  }
+
+
+  filterProjects(tech: string): void {
+    this.selectedTech = tech;
+    if (tech === 'All') {
+      this.filteredProjects = this.projects;
+    } else {
+      this.filteredProjects = this.projects.filter(project =>
+        project.technologies.includes(tech)
+      );
+    }
+  }
 }
