@@ -7,7 +7,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:portfolio": "node dist/portfolio/server/server.mjs",
-    "build": "ng build --configuration production",
+    "build": "npm i --force && ng build --configuration production",
     "build:ssr": "ng build && ng run portfolio:server",
     "serve:ssr": "node dist/portfolio/server/main.js"
   },
