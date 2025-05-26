@@ -121,3 +121,13 @@ animation: identifier linear;
         animation-timeline: view();
         animation-range: entry 0% cover 30%;
 }
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.icon {
+    font-size: 24px;
+    cursor: pointer;
+    text-decoration: none;
+}

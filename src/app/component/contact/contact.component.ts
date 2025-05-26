@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { ADDRESS, EMAIL, GITHUB, LINKEDIN, PHONE } from '../../../constents';
 
 @Component({
   selector: 'app-contact',
@@ -17,7 +18,13 @@ import { MatInputModule } from '@angular/material/input';
 })
 export class ContactComponent {
   contactForm: FormGroup;
-
+  userData = {
+    linkedin: LINKEDIN,
+    github: GITHUB,
+    phone: PHONE,
+    email: EMAIL,
+    address: ADDRESS
+  }
 
   constructor(private fb: FormBuilder) {
     this.contactForm = this.fb.group({

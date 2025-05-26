@@ -64,7 +64,7 @@
                     <span class="icon">📧</span>
                     <div>
                         <div class="label">Email</div>
-                        <div class="value">vijay.amarnathexampl.com</div>
+                        <div class="value">{{userData.email}}</div>
                     </div>
                 </div>
 
@@ -72,7 +72,7 @@
                     <span class="icon">📞</span>
                     <div>
                         <div class="label">Phone</div>
-                        <div class="value">+1 (234) 567-890</div>
+                        <div class="value">{{userData.phone}}</div>
                     </div>
                 </div>
 
@@ -80,16 +80,20 @@
                     <span class="icon">📍</span>
                     <div>
                         <div class="label">Location</div>
-                        <div class="value">Bangalore, India</div>
+                        <div class="value">{{userData.address}}</div>
+
                     </div>
                 </div>
 
                 <h3 class="section-subtitle">Connect With Me</h3>
                 <div class="social-icons">
-                    <span class="icon">🔗</span>
-                    <span class="icon">🐙</span>
-                    <span class="icon">✉️</span>
+                    <a [href]="userData.linkedin" target="_blank" class="icon" title="LinkedIn">🔗</a>
+                    <a [href]="userData.github" target="_blank" class="icon" title="GitHub">🐙</a>
+                    <a [href]="'mailto:' + userData.email" class="icon" title="Email">✉️</a>
+                    <a [href]="'https://wa.me/' + userData.phone" target="_blank" class="icon" title="WhatsApp">💬</a>
+
                 </div>
+
             </div>
 
         </div>
