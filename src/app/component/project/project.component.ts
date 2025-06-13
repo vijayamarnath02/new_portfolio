@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { MatTooltipModule } from '@angular/material/tooltip';
+
 @Component({
   selector: 'app-project',
   imports: [CommonModule, MatTooltipModule],
@@ -18,7 +19,8 @@ export class ProjectComponent implements OnInit {
       technologies: ["Angular", "TypeScript", "NgRx", "Chart.js", "Angular Material"],
       category: "angular",
       demoUrl: "https://example.com/demo1",
-      githubUrl: "https://github.com/example/project1"
+      githubUrl: "https://github.com/example/project1",
+      download: false
     },
     {
       id: 2,
@@ -28,17 +30,19 @@ export class ProjectComponent implements OnInit {
       technologies: ["Angular", "TypeScript", "RxJS", "Firebase", "Bootstrap"],
       category: "angular",
       demoUrl: "https://example.com/demo2",
-      githubUrl: "https://github.com/example/project2"
+      githubUrl: "https://github.com/example/project2", download: false
     },
+
     {
       id: 3,
       title: "Weather Forecast App",
       description: "A weather application that provides current conditions and forecasts for locations worldwide using modern UI components and animations.",
       image: "https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      technologies: ["Angular", "TypeScript", "OpenWeatherMap API", "SCSS"],
+      technologies: ["Angular", "Ionic", "TypeScript", "OpenWeatherMap API", "SCSS"],
       category: "angular",
-      demoUrl: "https://example.com/demo3",
-      githubUrl: "https://github.com/example/project3"
+      demoUrl: "../../../../public/assetes/app-debug.apk",
+      githubUrl: "https://github.com/vijayamarnath02/Weather_App",
+      download: true
     },
     {
       id: 4,
@@ -48,7 +52,8 @@ export class ProjectComponent implements OnInit {
       technologies: ["Angular", "Node.js", "Express", "MongoDB", "D3.js"],
       category: "fullstack",
       demoUrl: "https://example.com/demo4",
-      githubUrl: "https://github.com/example/project4"
+      githubUrl: "https://github.com/example/project4",
+      download: false
     },
     {
       id: 5,
@@ -58,7 +63,8 @@ export class ProjectComponent implements OnInit {
       technologies: ["TypeScript", "React", "Redux", "Spoonacular API"],
       category: "typescript",
       demoUrl: "https://example.com/demo5",
-      githubUrl: "https://github.com/example/project5"
+      githubUrl: "https://github.com/example/project5",
+      download: false
     },
     {
       id: 6,
@@ -68,7 +74,8 @@ export class ProjectComponent implements OnInit {
       technologies: ["Angular", "TypeScript", "NgRx", "Chart.js", "Firebase"],
       category: "angular",
       demoUrl: "https://example.com/demo6",
-      githubUrl: "https://github.com/example/project6"
+      githubUrl: "https://github.com/example/project6",
+      download: false
     }
   ];
   filteredProjects: any = [];
