@@ -8,12 +8,10 @@ export class PwaUpdateService {
 
   constructor(private swUpdate: SwUpdate) {
     if (swUpdate.isEnabled) {
-      // Check for updates every 30 seconds
       setInterval(() => {
         swUpdate.checkForUpdate();
       }, 30000);
 
-      // Handle available updates
       swUpdate.versionUpdates.subscribe(event => {
         if (event.type === 'VERSION_DETECTED') {
           console.log('New version detected:', event.version);
