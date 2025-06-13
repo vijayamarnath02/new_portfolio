@@ -40,7 +40,7 @@ export class ProjectComponent implements OnInit {
       image: "https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       technologies: ["Angular", "Ionic", "TypeScript", "OpenWeatherMap API", "SCSS"],
       category: "angular",
-      demoUrl: "../../../../public/assetes/app-debug.apk",
+      demoUrl: "../../../assetes/app-debug.apk",
       githubUrl: "https://github.com/vijayamarnath02/Weather_App",
       download: true
     },
