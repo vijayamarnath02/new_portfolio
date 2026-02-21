@@ -14,7 +14,7 @@ import { faFileDownload, faRedoAlt, faSync, faThumbsUp } from '@fortawesome/free
 
 })
 export class ResumeDownloadDialogComponent {
-  resumeUrl = 'assets/resume.pdf';
+  resumeUrl = 'VIJAY_AMARNATH_M_V_RESUME.pdf';
   faThumbsUp = faThumbsUp;
   faFileDownload = faFileDownload;
   faRedoAlt = faRedoAlt;
@@ -27,9 +27,12 @@ export class ResumeDownloadDialogComponent {
   }
   downloadResume() {
     const link = document.createElement('a');
-    link.href = 'assets/resume.pdf'; // replace with actual file path
-    link.download = 'My_Resume.pdf';
+    link.href = this.resumeUrl;
+    link.target = '_blank'; // optional
+    link.download = 'Vijay_Amarnath_M_V_Resume.pdf';
+    document.body.appendChild(link);
     link.click();
+    document.body.removeChild(link);
   }
 
   reloadPage() {
