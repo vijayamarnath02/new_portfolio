@@ -33,8 +33,8 @@ export class ChatboatComponent {
 
     // Trigger file download
     const link = document.createElement('a');
-    link.href = 'assets/resume.pdf';
-    link.download = 'My_Resume.pdf';
+    link.href = 'assets/VIJAY_AMARNATH_M_V_RESUME.pdf';
+    link.download = 'Vijay_Amarnath_M_V_Resume.pdf';
     link.click();
 
 

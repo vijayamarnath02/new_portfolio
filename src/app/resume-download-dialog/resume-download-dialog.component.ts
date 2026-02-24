@@ -14,7 +14,7 @@ import { faFileDownload, faRedoAlt, faSync, faThumbsUp } from '@fortawesome/free
 
 })
 export class ResumeDownloadDialogComponent {
-  resumeUrl = 'VIJAY_AMARNATH_M_V_RESUME.pdf';
+  resumeUrl = 'assets/VIJAY_AMARNATH_M_V_RESUME.pdf';
   faThumbsUp = faThumbsUp;
   faFileDownload = faFileDownload;
   faRedoAlt = faRedoAlt;
