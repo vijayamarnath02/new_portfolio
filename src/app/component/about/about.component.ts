@@ -15,15 +15,11 @@ export class AboutComponent {
   faDownload = faDownload;
 
   get experienceText(): string {
-    const start = new Date(2024, 8, 16); // Sep 16, 2024 (month 0-indexed)
+    const start = new Date(2024, 8, 16); // Sep 16, 2024
     const now = new Date();
     const totalMonths =
       (now.getFullYear() - start.getFullYear()) * 12 +
       (now.getMonth() - start.getMonth());
-    const years = Math.floor(totalMonths / 12);
-    const months = totalMonths % 12;
-    if (years === 0) return `${months}M+`;
-    if (months === 0) return `${years}Y+`;
-    return `${years}Y ${months}M`;
+    return (totalMonths / 12).toFixed(1) + '+';
   }
 }

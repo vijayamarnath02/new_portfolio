@@ -32,6 +32,9 @@
 *, *::before, *::after {
     box-sizing: border-box;
     cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 body {
