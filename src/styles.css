@@ -29,12 +29,12 @@
     --button-text: #FFFFFF;
     --box-shadow: 0 2px 16px rgba(0, 0, 0, 0.35);
 }
-                *,
-                *::before,
-                *::after {
-                    box-sizing: border-box;  
-                       }
-body{
+*, *::before, *::after {
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -48,7 +48,7 @@ body{
     height: 100lvh;
     height: 100svh;
     transition: background-color 0.5s ease, color 0.5s ease;
-
+    cursor: pointer;
 }
 
 html, body { height: 100%; overflow-x: hidden;

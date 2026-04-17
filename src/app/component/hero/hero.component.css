@@ -25,7 +25,6 @@
     margin-bottom: 16px;
     background: color-mix(in srgb, var(--accent-primary) 8%, transparent);
     user-select: none;
-    cursor: default;
 }
 
 .badge-dot {
@@ -196,7 +195,6 @@ a {
     position: relative;
     height: 420px;
     user-select: none;
-    cursor: default;
 }
 
 .orbit {
@@ -270,44 +268,59 @@ a {
     50%      { transform: translateY(-10px); }
 }
 
-/* ── Responsive ── */
+/* ── Responsive: Tablet (601px – 900px) ── */
 @media (max-width: 900px) {
+    .hero-section {
+        min-height: auto;
+        padding: 50px 0 40px;
+    }
+
     .hero-grid {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 36px;
         text-align: center;
     }
 
-    .hero-buttons {
-        justify-content: center;
-    }
+    .hero-buttons  { justify-content: center; flex-wrap: wrap; }
+    .social        { justify-content: center; }
+    .hero-desc     { max-width: 100%; margin-left: auto; margin-right: auto; }
 
-    .social {
-        justify-content: center;
-    }
+    .hero-visual   { height: 280px; }
+    .outer-orbit   { width: 240px; height: 240px; }
+    .inner-orbit   { width: 185px; height: 185px; }
+    .avatar-circle { width: 140px; height: 140px; }
+    .avatar-initials { font-size: 2.8rem; }
 
-    .hero-desc {
-        max-width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .hero-visual {
-        height: 320px;
-    }
-
-    .outer-orbit { width: 270px; height: 270px; }
-    .inner-orbit { width: 215px; height: 215px; }
-    .avatar-circle { width: 170px; height: 170px; }
-    .avatar-initials { font-size: 3.5rem; }
-
-    .badge-angular { top: 10px;   right: 10px; }
-    .badge-ts      { top: 10px;   left: 10px; }
-    .badge-node    { bottom: 20px; right: 10px; }
-    .badge-react   { bottom: 20px; left: 10px; }
+    .badge-angular { top: 8px;  right: 8px; font-size: 0.72rem; padding: 5px 12px; }
+    .badge-ts      { top: 8px;  left: 8px;  font-size: 0.72rem; padding: 5px 12px; }
+    .badge-node    { bottom: 16px; right: 8px; font-size: 0.72rem; padding: 5px 12px; }
+    .badge-react   { bottom: 16px; left: 8px;  font-size: 0.72rem; padding: 5px 12px; }
 }
 
-@media (max-width: 480px) {
-    .hero-visual { display: none; }
-    .hero-section { min-height: auto; padding: 20px 0; }
+/* ── Responsive: Mobile (≤ 640px) ── */
+@media (max-width: 640px) {
+    .hero-section {
+        min-height: auto;
+        padding: 36px 0 32px;
+    }
+
+    .hero-visual   { display: none; }
+    .typewriter-row { display: none; }
+
+    .hero-name     { font-size: clamp(1.75rem, 8vw, 2.4rem); }
+    .hero-greeting { font-size: 1.1rem !important; }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .btn {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .available-badge { font-size: 0.75rem; padding: 5px 12px; }
+    .hero-desc       { font-size: 0.9rem; }
 }
