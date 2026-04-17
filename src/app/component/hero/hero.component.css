@@ -118,7 +118,10 @@
     text-decoration: none;
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 6px;
+    box-sizing: border-box;
+    color: inherit;
 }
 
 .btn-primary {
@@ -187,7 +190,7 @@
     box-shadow: 0 6px 16px color-mix(in srgb, var(--accent-primary) 30%, transparent);
 }
 
-a {
+.social a {
     all: unset;
     cursor: pointer;
 }
@@ -325,7 +328,7 @@ a {
     }
 
     .btn {
-        justify-content: center;
         width: 100%;
+        display: flex;
     }
 }
