@@ -24,6 +24,8 @@
     color: var(--accent-primary);
     margin-bottom: 16px;
     background: color-mix(in srgb, var(--accent-primary) 8%, transparent);
+    user-select: none;
+    cursor: default;
 }
 
 .badge-dot {
@@ -67,13 +69,13 @@
     display: inline-block;
     overflow: hidden;
     white-space: nowrap;
-    border-right: 3px solid var(--accent-primary);
+    border-right: 3px solid transparent;
     color: var(--secondary-text);
     font-size: 1rem;
     font-weight: 500;
     animation:
-        typing 3.2s steps(55, end) 0.4s forwards,
-        blink-caret 0.7s step-end infinite;
+        typing 3.2s steps(55, end) 0.4s both,
+        blink-caret 0.7s step-end 0.4s infinite;
     width: 0;
 }
 
@@ -193,6 +195,8 @@ a {
     justify-content: center;
     position: relative;
     height: 420px;
+    user-select: none;
+    cursor: default;
 }
 
 .orbit {

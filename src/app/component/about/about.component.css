@@ -94,6 +94,7 @@
     background: var(--background-color);
     transition: border-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
     cursor: default;
+    user-select: none;
 }
 
 .stat-card:hover {
