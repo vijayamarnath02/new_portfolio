@@ -2,6 +2,8 @@
     min-height: calc(100vh - 60px);
     display: flex;
     align-items: center;
+    overflow: hidden;
+    width: 100%;
 }
 
 .hero-grid {
@@ -48,14 +50,17 @@
 }
 
 .hero-name {
-    font-size: clamp(2rem, 4vw, 3.4rem);
+    font-size: clamp(1.8rem, 3vw, 3rem);
     font-weight: 900;
-    line-height: 1.1;
+    line-height: 1.15;
     background: linear-gradient(135deg, var(--accent-primary), var(--accent-hover));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     margin: 0 0 16px;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    max-width: 100%;
 }
 
 .typewriter-row {
@@ -268,7 +273,7 @@ a {
     50%      { transform: translateY(-10px); }
 }
 
-/* ── Responsive: Tablet (601px – 900px) ── */
+/* ── Tablet: stack grid, shrink avatar (901px not reached on mobile) ── */
 @media (max-width: 900px) {
     .hero-section {
         min-height: auto;
@@ -285,30 +290,33 @@ a {
     .social        { justify-content: center; }
     .hero-desc     { max-width: 100%; margin-left: auto; margin-right: auto; }
 
-    .hero-visual   { height: 280px; }
-    .outer-orbit   { width: 240px; height: 240px; }
-    .inner-orbit   { width: 185px; height: 185px; }
-    .avatar-circle { width: 140px; height: 140px; }
-    .avatar-initials { font-size: 2.8rem; }
+    .hero-visual   { height: 260px; }
+    .outer-orbit   { width: 220px; height: 220px; }
+    .inner-orbit   { width: 168px; height: 168px; }
+    .avatar-circle { width: 128px; height: 128px; }
+    .avatar-initials { font-size: 2.6rem; }
 
-    .badge-angular { top: 8px;  right: 8px; font-size: 0.72rem; padding: 5px 12px; }
-    .badge-ts      { top: 8px;  left: 8px;  font-size: 0.72rem; padding: 5px 12px; }
-    .badge-node    { bottom: 16px; right: 8px; font-size: 0.72rem; padding: 5px 12px; }
-    .badge-react   { bottom: 16px; left: 8px;  font-size: 0.72rem; padding: 5px 12px; }
+    .badge-angular { top: 6px;    right: 6px;   font-size: 0.7rem; padding: 4px 10px; }
+    .badge-ts      { top: 6px;    left: 6px;    font-size: 0.7rem; padding: 4px 10px; }
+    .badge-node    { bottom: 10px; right: 6px;  font-size: 0.7rem; padding: 4px 10px; }
+    .badge-react   { bottom: 10px; left: 6px;   font-size: 0.7rem; padding: 4px 10px; }
 }
 
-/* ── Responsive: Mobile (≤ 640px) ── */
-@media (max-width: 640px) {
-    .hero-section {
-        min-height: auto;
-        padding: 36px 0 32px;
-    }
-
-    .hero-visual   { display: none; }
+/* ── Hide typewriter on all phones/small tablets (portrait + landscape) ── */
+@media (max-width: 768px) {
     .typewriter-row { display: none; }
+    .hero-name      { font-size: clamp(1.6rem, 6vw, 2.2rem); }
+}
 
-    .hero-name     { font-size: clamp(1.75rem, 8vw, 2.4rem); }
-    .hero-greeting { font-size: 1.1rem !important; }
+/* ── Mobile portrait: hide avatar, stack buttons full-width ── */
+@media (max-width: 540px) {
+    .hero-section   { padding: 28px 0 24px; }
+    .hero-visual    { display: none; }
+
+    .hero-name      { font-size: clamp(1.5rem, 7.5vw, 2rem); }
+    .hero-greeting  { font-size: 1rem !important; }
+    .hero-desc      { font-size: 0.88rem; line-height: 1.65; }
+    .available-badge { font-size: 0.72rem; padding: 4px 12px; }
 
     .hero-buttons {
         flex-direction: column;
@@ -320,7 +328,4 @@ a {
         justify-content: center;
         width: 100%;
     }
-
-    .available-badge { font-size: 0.75rem; padding: 5px 12px; }
-    .hero-desc       { font-size: 0.9rem; }
 }
