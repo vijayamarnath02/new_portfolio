@@ -5,6 +5,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { ADDRESS, EMAIL, GITHUB, LINKEDIN, PHONE } from '../../../constents';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faEnvelope, faPhone, faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin, faGithub, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-contact',
@@ -12,7 +15,8 @@ import { ADDRESS, EMAIL, GITHUB, LINKEDIN, PHONE } from '../../../constents';
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
-    MatButtonModule,],
+    MatButtonModule,
+    FontAwesomeModule,],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css'
 })
@@ -25,6 +29,13 @@ export class ContactComponent {
     email: EMAIL,
     address: ADDRESS
   }
+
+  faEnvelope = faEnvelope;
+  faPhone = faPhone;
+  faLocationDot = faLocationDot;
+  faLinkedin = faLinkedin;
+  faGithub = faGithub;
+  faWhatsapp = faWhatsapp;
 
   constructor(private fb: FormBuilder) {
     this.contactForm = this.fb.group({

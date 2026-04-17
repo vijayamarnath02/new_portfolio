@@ -6,25 +6,29 @@
     --accent-hover: #5824B5;
     --border-line: #E0E0E0;
     --card-background: #FFFFFF;
+    --navbar-bg: rgba(255, 255, 255, 0.88);
     --button-text: #FFFFFF;
     --font-size-body: 1rem;
     --font-header-size: 2rem;
     --font-header-weight: 900;
-    --font-family-body: 'Outfit', sans-serif; 
---sub-heading-size:2.5rem;
---box-shadow:0 0 10px rgba(0, 0, 0, 0.1);}
-    
-        .dark-theme {
-            --background-color: #121212;
-            --primary-text: #EAEAEA;
-            --secondary-text: #A0A0A0;
-            --accent-primary: #8a4fff;
-            --accent-hover: #D1B3FF;
-            --border-line: #2C2C2C;
-            --card-background: #1E1E1E;
-            --button-text: #FFFFFF;
-            --box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
-        }
+    --font-family-body: 'Outfit', sans-serif;
+    --sub-heading-size: 2.5rem;
+    --box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+    --section-padding: 60px 0;
+}
+
+.dark-theme {
+    --background-color: #0f0f13;
+    --primary-text: #EAEAEA;
+    --secondary-text: #A0A0A0;
+    --accent-primary: #8a4fff;
+    --accent-hover: #b07fff;
+    --border-line: #2C2C2C;
+    --card-background: #1a1a24;
+    --navbar-bg: rgba(26, 26, 36, 0.88);
+    --button-text: #FFFFFF;
+    --box-shadow: 0 2px 16px rgba(0, 0, 0, 0.35);
+}
                 *,
                 *::before,
                 *::after {
@@ -83,7 +87,13 @@ h2 {
     color: var(--primary-text);
      }
      .container{
-        padding: 10px 35px;
+        padding: 60px 60px;
+     }
+
+     @media (max-width: 768px) {
+        .container {
+            padding: 40px 20px;
+        }
      }
 
 

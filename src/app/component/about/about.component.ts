@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faAward, faBriefcase, faCalendar, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
+import { faAward, faBriefcase, faCalendar, faGraduationCap, faDownload } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-about',
   imports: [FontAwesomeModule],
@@ -12,5 +12,6 @@ export class AboutComponent {
   faAward = faAward;
   faCalendar = faCalendar;
   faGraduationCap = faGraduationCap;
+  faDownload = faDownload;
 
 }

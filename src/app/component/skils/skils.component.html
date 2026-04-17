@@ -5,24 +5,17 @@
             <h2 class="gradient-text">Technical <span class="gradient">Skills</span></h2>
         </section>
         <p>
-            Through my experience with Angular development, I've gained proficiency in various technologies <br>and
-            tools.
-            Here's an
-            overview of my technical expertise.
+            Through my experience with Angular development, I've gained proficiency in various technologies
+            and tools. Here's an overview of my technical expertise.
         </p>
     </div>
 
-
     <div class="skills-cards">
-        <div class="skill-card" *ngFor="let skill of skills">
-            <div [matTooltip]="skill.name">
-                <div style="height: 50%;align-items: center;text-align: center;justify-content: center;">
-                    <img [src]="skill.icon" width="100px" [alt]="skill.name" />
-                </div>
-                <div style="height: 50%;align-items:end;text-align: center;margin-top: 25px;font-weight: bolder;">
-                    <p>{{ skill.name }}</p>
-                </div>
+        <div class="skill-card" *ngFor="let skill of skills" [matTooltip]="skill.name">
+            <div class="skill-icon-wrap">
+                <img [src]="skill.icon" [alt]="skill.name" />
             </div>
+            <p class="skill-name">{{ skill.name }}</p>
         </div>
     </div>
 

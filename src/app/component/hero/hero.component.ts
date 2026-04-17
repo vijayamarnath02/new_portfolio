@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faPhone, faDownload } from '@fortawesome/free-solid-svg-icons';
 import { EMAIL, GITHUB, LINKEDIN, PHONE } from '../../../constents';
 @Component({
   selector: 'app-hero',
@@ -14,6 +14,7 @@ export class HeroComponent {
   faPhone = faPhone;
   faGithub = faGithub;
   faLinkedin = faLinkedin;
+  faDownload = faDownload;
   userData = {
     linkedin: LINKEDIN,
     github: GITHUB,
