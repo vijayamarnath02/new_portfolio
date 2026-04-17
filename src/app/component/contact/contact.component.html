@@ -4,105 +4,63 @@
             <h2 class="gradient-text">Get In <span class="gradient">Touch</span></h2>
         </section>
         <p>
-            Feel free to reach out if you'd like to work together, have a question, or just want to connect.
+            I'd love to hear from you! Reach out through any of the channels below.
         </p>
     </div>
 
-    <div class="main-content">
+    <div class="contact-grid">
 
-        <!-- Contact Form -->
-        <div class="form-card">
-            <h3 class="card-title">Send a Message</h3>
-            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
-                <mat-form-field appearance="outline">
-                    <mat-label>Name</mat-label>
-                    <input matInput formControlName="name" />
-                    <mat-error *ngIf="contactForm.get('name')?.hasError('required')">
-                        Name is required
-                    </mat-error>
-                </mat-form-field>
-
-                <mat-form-field appearance="outline">
-                    <mat-label>Email</mat-label>
-                    <input matInput type="email" formControlName="email" />
-                    <mat-error *ngIf="contactForm.get('email')?.hasError('required')">
-                        Email is required
-                    </mat-error>
-                    <mat-error *ngIf="contactForm.get('email')?.hasError('email')">
-                        Enter a valid email
-                    </mat-error>
-                </mat-form-field>
-
-                <mat-form-field appearance="outline">
-                    <mat-label>Subject</mat-label>
-                    <input matInput formControlName="subject" />
-                    <mat-error *ngIf="contactForm.get('subject')?.hasError('required')">
-                        Subject is required
-                    </mat-error>
-                </mat-form-field>
-
-                <mat-form-field appearance="outline">
-                    <mat-label>Message</mat-label>
-                    <textarea matInput rows="5" formControlName="message"></textarea>
-                    <mat-error *ngIf="contactForm.get('message')?.hasError('required')">
-                        Message is required
-                    </mat-error>
-                </mat-form-field>
-
-                <button type="submit" [disabled]="contactForm.invalid" class="submit-btn">
-                    Send Message
-                </button>
-            </form>
-        </div>
-
-        <!-- Contact Info -->
-        <div class="info-panel">
-            <h3 class="card-title">Contact Information</h3>
-
-            <div class="contact-item">
-                <div class="contact-icon-wrap">
-                    <fa-icon [icon]="faEnvelope"></fa-icon>
-                </div>
-                <div>
-                    <div class="contact-label">Email</div>
-                    <div class="contact-value">{{userData.email}}</div>
-                </div>
+        <a [href]="'mailto:' + userData.email" class="contact-card" title="Send Email">
+            <div class="card-icon email-icon">
+                <fa-icon [icon]="faEnvelope"></fa-icon>
             </div>
-
-            <div class="contact-item">
-                <div class="contact-icon-wrap">
-                    <fa-icon [icon]="faPhone"></fa-icon>
-                </div>
-                <div>
-                    <div class="contact-label">Phone</div>
-                    <div class="contact-value">{{userData.phone}}</div>
-                </div>
+            <div class="card-info">
+                <span class="card-label">Email</span>
+                <span class="card-value">{{userData.email}}</span>
             </div>
+            <fa-icon [icon]="faArrowRight" class="arrow"></fa-icon>
+        </a>
 
-            <div class="contact-item">
-                <div class="contact-icon-wrap">
-                    <fa-icon [icon]="faLocationDot"></fa-icon>
-                </div>
-                <div>
-                    <div class="contact-label">Location</div>
-                    <div class="contact-value">{{userData.address}}</div>
-                </div>
+        <a [href]="userData.linkedin" target="_blank" class="contact-card" title="LinkedIn">
+            <div class="card-icon linkedin-icon">
+                <fa-icon [icon]="faLinkedin"></fa-icon>
             </div>
+            <div class="card-info">
+                <span class="card-label">LinkedIn</span>
+                <span class="card-value">vijay-amarnath-m-v</span>
+            </div>
+            <fa-icon [icon]="faArrowRight" class="arrow"></fa-icon>
+        </a>
 
-            <h4 class="connect-title">Connect With Me</h4>
-            <div class="social-row">
-                <a [href]="userData.linkedin" target="_blank" class="social-link" title="LinkedIn">
-                    <fa-icon [icon]="faLinkedin"></fa-icon>
-                </a>
-                <a [href]="userData.github" target="_blank" class="social-link" title="GitHub">
-                    <fa-icon [icon]="faGithub"></fa-icon>
-                </a>
-                <a [href]="'mailto:' + userData.email" class="social-link" title="Email">
-                    <fa-icon [icon]="faEnvelope"></fa-icon>
-                </a>
-                <a [href]="'https://wa.me/' + userData.phone" target="_blank" class="social-link" title="WhatsApp">
-                    <fa-icon [icon]="faWhatsapp"></fa-icon>
-                </a>
+        <a [href]="userData.github" target="_blank" class="contact-card" title="GitHub">
+            <div class="card-icon github-icon">
+                <fa-icon [icon]="faGithub"></fa-icon>
+            </div>
+            <div class="card-info">
+                <span class="card-label">GitHub</span>
+                <span class="card-value">vijayamarnath02</span>
+            </div>
+            <fa-icon [icon]="faArrowRight" class="arrow"></fa-icon>
+        </a>
+
+        <a [href]="'https://wa.me/' + userData.phone" target="_blank" class="contact-card" title="WhatsApp">
+            <div class="card-icon whatsapp-icon">
+                <fa-icon [icon]="faWhatsapp"></fa-icon>
+            </div>
+            <div class="card-info">
+                <span class="card-label">WhatsApp</span>
+                <span class="card-value">{{userData.phone}}</span>
+            </div>
+            <fa-icon [icon]="faArrowRight" class="arrow"></fa-icon>
+        </a>
+
+        <div class="contact-card no-link location-card">
+            <div class="card-icon location-icon">
+                <fa-icon [icon]="faLocationDot"></fa-icon>
+            </div>
+            <div class="card-info">
+                <span class="card-label">Location</span>
+                <span class="card-value">{{userData.address}}</span>
             </div>
         </div>
 
