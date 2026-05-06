@@ -15,14 +15,15 @@ export class ProjectComponent implements OnInit {
     {
       id: 1,
       title: 'Import-Export Business Approver',
-      description: 'Enterprise multi-module application managing approval workflows for import-export operations — role-based approvals, dynamic form processing, document verification, and real-time status tracking, built on Angular Micro Frontend architecture.',
+      description: 'Enterprise multi-module approval workflow application built on Angular Micro Frontend architecture with Module Federation. Features role-based approvals, dynamic forms, and real-time status tracking.',
       image: 'https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       technologies: ['Angular 17', 'Module Federation', 'RxJS', 'Akita', 'TypeScript', 'RBAC'],
       category: 'Angular',
       demoUrl: null,
       githubUrl: null,
       note: 'Production work at Purpleslate — code not publicly available',
-      download: false
+      download: false,
+      featured: true
     },
     {
       id: 2,
@@ -34,7 +35,8 @@ export class ProjectComponent implements OnInit {
       demoUrl: null,
       githubUrl: null,
       note: null,
-      download: false
+      download: false,
+      featured: false
     },
     {
       id: 3,
@@ -46,7 +48,8 @@ export class ProjectComponent implements OnInit {
       demoUrl: null,
       githubUrl: null,
       note: null,
-      download: false
+      download: false,
+      featured: false
     },
     {
       id: 4,
@@ -58,10 +61,24 @@ export class ProjectComponent implements OnInit {
       demoUrl: null,
       githubUrl: null,
       note: null,
-      download: false
+      download: false,
+      featured: false
     },
     {
       id: 5,
+      title: 'Product Catalog Integration',
+      description: 'Product catalog with third-party API integration, token-based authentication, and resilient data streams using RxJS operators. Features optimized loading states and smooth UX.',
+      image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      technologies: ['Angular', 'RxJS', 'REST API', 'JWT', 'TypeScript'],
+      category: 'Angular',
+      demoUrl: null,
+      githubUrl: null,
+      note: null,
+      download: false,
+      featured: false
+    },
+    {
+      id: 6,
       title: 'Weather Forecast App',
       description: 'A weather application built with Ionic + Angular providing current conditions and forecasts for locations worldwide using the OpenWeatherMap API, with smooth animations and cross-platform support.',
       image: 'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
@@ -70,7 +87,8 @@ export class ProjectComponent implements OnInit {
       demoUrl: '../../../assetes/app-debug.apk',
       githubUrl: 'https://github.com/vijayamarnath02/Weather_App',
       note: null,
-      download: true
+      download: true,
+      featured: false
     },
   ];
 

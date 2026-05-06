@@ -1,0 +1,182 @@
+.container {
+    animation: identifier linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.header h2 {
+    margin-bottom: 10px;
+}
+
+.section-sub {
+    color: var(--secondary-text);
+    font-size: 1rem;
+    margin: 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+/* ── Grid ── */
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* ── Card ── */
+.achievement-card {
+    background: var(--card-background);
+    border: 1px solid var(--border-line);
+    border-radius: 20px;
+    padding: 32px 24px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: fadeInScale 0.6s ease both;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.achievement-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-primary);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.achievement-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-subtle);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+}
+
+.achievement-card:hover {
+    border-color: var(--accent-primary);
+    transform: translateY(-8px);
+    box-shadow: 0 16px 40px var(--accent-glow);
+}
+
+.achievement-card:hover::before {
+    opacity: 1;
+}
+
+.achievement-card:hover::after {
+    opacity: 1;
+}
+
+/* ── Icon ── */
+.achievement-icon {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+    position: relative;
+    z-index: 1;
+}
+
+/* ── Value ── */
+.achievement-value {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 2px;
+    margin-bottom: 12px;
+    position: relative;
+    z-index: 1;
+}
+
+.direction {
+    font-size: 1.5rem;
+    font-weight: 800;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.number {
+    font-size: 2.8rem;
+    font-weight: 900;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+
+.suffix {
+    font-size: 1.5rem;
+    font-weight: 800;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ── Labels ── */
+.achievement-label {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--primary-text);
+    margin: 0 0 6px;
+    position: relative;
+    z-index: 1;
+}
+
+.achievement-desc {
+    font-size: 0.78rem;
+    color: var(--secondary-text);
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    font-weight: 500;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+    .achievements-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 540px) {
+    .achievements-grid {
+        grid-template-columns: 1fr;
+        max-width: 320px;
+    }
+
+    .achievement-card {
+        padding: 24px 20px;
+    }
+
+    .number {
+        font-size: 2.2rem;
+    }
+}

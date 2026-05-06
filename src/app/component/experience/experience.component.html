@@ -24,9 +24,12 @@
                     </div>
                     <div class="card-meta">
                         <span class="exp-period">{{exp.period}}</span>
+                        <span class="exp-duration">{{exp.duration}}</span>
                         <span class="exp-badge" [ngClass]="getBadgeClass(exp.type)">{{exp.type}}</span>
                     </div>
                 </div>
+
+                <p class="exp-description" *ngIf="exp.description">{{exp.description}}</p>
 
                 <p class="exp-project" *ngIf="exp.project">
                     <strong>Project:</strong> {{exp.project}}

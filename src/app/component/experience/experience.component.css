@@ -23,7 +23,7 @@
 .timeline {
     display: flex;
     flex-direction: column;
-    max-width: 860px;
+    max-width: 880px;
     margin: 0 auto;
 }
 
@@ -47,24 +47,26 @@
     height: 14px;
     border-radius: 50%;
     background: var(--accent-primary);
-    border: 2px solid var(--card-background);
+    border: 3px solid var(--card-background);
     box-shadow: 0 0 0 2px var(--accent-primary);
     flex-shrink: 0;
+    transition: box-shadow 0.3s ease;
 }
 
 .is-current .timeline-dot {
     animation: pulse-exp 2s ease-in-out infinite;
+    background: var(--accent-primary);
 }
 
 @keyframes pulse-exp {
     0%, 100% { box-shadow: 0 0 0 2px var(--accent-primary); }
-    50%       { box-shadow: 0 0 0 6px color-mix(in srgb, var(--accent-primary) 25%, transparent); }
+    50%       { box-shadow: 0 0 0 8px color-mix(in srgb, var(--accent-primary) 20%, transparent); }
 }
 
 .timeline-line {
     flex: 1;
     width: 2px;
-    background: var(--border-line);
+    background: linear-gradient(180deg, var(--accent-primary), var(--border-line));
     margin: 6px 0;
     min-height: 24px;
 }
@@ -74,14 +76,33 @@
     background: var(--card-background);
     border: 1px solid var(--border-line);
     border-radius: 16px;
-    padding: 20px 24px;
+    padding: 24px 28px;
     margin-bottom: 24px;
-    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.timeline-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--gradient-primary);
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .timeline-card:hover {
     border-color: var(--accent-primary);
-    box-shadow: 0 8px 24px color-mix(in srgb, var(--accent-primary) 10%, transparent);
+    box-shadow: 0 12px 32px var(--accent-glow);
+    transform: translateX(4px);
+}
+
+.timeline-card:hover::before {
+    opacity: 1;
 }
 
 /* ── Card header ── */
@@ -100,7 +121,7 @@
 }
 
 .exp-title {
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     font-weight: 700;
     color: var(--primary-text);
     margin: 0 0 4px;
@@ -127,11 +148,21 @@
     white-space: nowrap;
 }
 
+.exp-duration {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--accent-primary);
+    background: color-mix(in srgb, var(--accent-primary) 10%, transparent);
+    padding: 2px 10px;
+    border-radius: 999px;
+    white-space: nowrap;
+}
+
 /* ── Type badge ── */
 .exp-badge {
     font-size: 0.7rem;
     font-weight: 700;
-    padding: 2px 10px;
+    padding: 3px 12px;
     border-radius: 999px;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -144,15 +175,30 @@
 .badge-training    { background: #ede9fe; color: #5b21b6; }
 
 /* ── Body ── */
+.exp-description {
+    font-size: 0.9rem;
+    color: var(--secondary-text);
+    line-height: 1.65;
+    margin: 0 0 12px;
+    padding: 10px 14px;
+    background: var(--background-color);
+    border-radius: 10px;
+    border-left: 3px solid var(--accent-primary);
+}
+
 .exp-project {
     font-size: 0.88rem;
     color: var(--secondary-text);
     margin: 0 0 10px;
 }
 
+.exp-project strong {
+    color: var(--primary-text);
+}
+
 .exp-highlights {
-    list-style: disc;
-    padding-left: 18px;
+    list-style: none;
+    padding-left: 0;
     margin: 0 0 14px;
     font-size: 0.88rem;
     color: var(--secondary-text);
@@ -160,7 +206,17 @@
 }
 
 .exp-highlights li {
-    margin-bottom: 4px;
+    margin-bottom: 6px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.exp-highlights li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--accent-primary);
+    font-weight: 700;
 }
 
 /* ── Tech chips ── */
@@ -172,11 +228,18 @@
 
 .tech-tag {
     font-size: 0.75rem;
-    padding: 3px 10px;
+    padding: 4px 12px;
     background: var(--background-color);
     border: 1px solid var(--border-line);
-    border-radius: 999px;
+    border-radius: 8px;
     color: var(--secondary-text);
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.tech-tag:hover {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
 }
 
 /* ── Mobile ── */
@@ -203,6 +266,10 @@
     }
 
     .timeline-card {
-        padding: 16px;
+        padding: 18px;
+    }
+
+    .timeline-card:hover {
+        transform: none;
     }
 }

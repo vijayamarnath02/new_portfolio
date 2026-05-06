@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="header">
+        <section id="achievements">
+            <h2 class="gradient-text">Key <span class="gradient">Achievements</span></h2>
+        </section>
+        <p class="section-sub">
+            Measurable impact delivered through performance optimization and architectural decisions.
+        </p>
+    </div>
+
+    <div class="achievements-grid">
+        <div class="achievement-card" *ngFor="let a of achievements; let i = index"
+             [style.animationDelay]="(i * 0.15) + 's'">
+            <div class="achievement-icon">{{ a.icon }}</div>
+            <div class="achievement-value">
+                <span class="direction">{{ a.direction }}</span>
+                <span class="number">{{ a.currentValue }}</span>
+                <span class="suffix">{{ a.suffix }}</span>
+            </div>
+            <h3 class="achievement-label">{{ a.label }}</h3>
+            <p class="achievement-desc">{{ a.description }}</p>
+        </div>
+    </div>
+</div>

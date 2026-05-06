@@ -41,14 +41,31 @@
     text-decoration: none;
     color: var(--primary-text);
     cursor: pointer;
-    transition: all 0.25s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
+    overflow: hidden;
+}
+
+.contact-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--gradient-primary);
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .contact-card:not(.no-link):hover {
     border-color: var(--accent-primary);
-    transform: translateY(-4px);
-    box-shadow: 0 12px 32px color-mix(in srgb, var(--accent-primary) 15%, transparent);
+    transform: translateY(-5px);
+    box-shadow: 0 16px 40px var(--accent-glow);
+}
+
+.contact-card:not(.no-link):hover::before {
+    opacity: 1;
 }
 
 .contact-card:not(.no-link):hover .arrow {
@@ -73,7 +90,7 @@
 .linkedin-icon { background: linear-gradient(135deg, #0077b5, #005885); }
 .github-icon   { background: linear-gradient(135deg, #333, #111); }
 .whatsapp-icon { background: linear-gradient(135deg, #25d366, #1aaf53); }
-.location-icon { background: linear-gradient(135deg, var(--accent-primary), var(--accent-hover)); }
+.location-icon { background: var(--gradient-primary); }
 
 /* ── Text ── */
 .card-info {
@@ -108,7 +125,7 @@
     color: var(--border-line);
     font-size: 0.85rem;
     flex-shrink: 0;
-    transition: all 0.2s ease;
+    transition: all 0.25s ease;
 }
 
 /* Location card spans full width */

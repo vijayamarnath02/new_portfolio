@@ -1,4 +1,20 @@
-<footer
-    style="padding: 20px; background-color: var(--card-background); text-align: center; border-top: 1px solid var(--border-line);width: 100%;box-sizing: border-box;margin-top: 20px; ">
-    <p style="color: var(--secondary-text);">© {{year}} Vijay Amarnath M V. Built with Angular & ❤️</p>
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-brand">
+            <span class="footer-logo">VA</span>
+            <span class="footer-tagline">MEAN Stack Developer</span>
+        </div>
+        <div class="footer-links">
+            <a [href]="github" target="_blank" title="GitHub">
+                <fa-icon [icon]="faGithub"></fa-icon>
+            </a>
+            <a [href]="linkedin" target="_blank" title="LinkedIn">
+                <fa-icon [icon]="faLinkedin"></fa-icon>
+            </a>
+        </div>
+        <p class="footer-copy">
+            © {{year}} Vijay Amarnath M V. Built with Angular &
+            <fa-icon [icon]="faHeart" style="color: #ef4444; font-size: 0.85rem;"></fa-icon>
+        </p>
+    </div>
 </footer>

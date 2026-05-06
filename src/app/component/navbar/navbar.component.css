@@ -1,20 +1,22 @@
-nav{
+nav {
     z-index: 1000;
-    position: fixed; 
+    position: fixed;
 }
+
 .content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: var(--navbar-bg);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     padding: 14px 60px;
     box-sizing: border-box;
     border-bottom: 1px solid var(--border-line);
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
     transition: background-color 0.3s ease;
 }
+
 /* Sticky ONLY on desktop */
 @media (min-width: 769px) {
     .content {
@@ -24,17 +26,19 @@ nav{
 }
 
 .logo {
-    background: linear-gradient(to right, var(--accent-primary), var(--accent-hover));
+    background: var(--gradient-primary);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-clip: text;
     font-size: var(--font-header-size);
     font-weight: var(--font-header-weight);
     cursor: pointer;
+    letter-spacing: -0.03em;
 }
 
 .nav-bar-list {
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
     align-items: center;
     flex-wrap: wrap;
 }
@@ -43,6 +47,9 @@ nav{
     cursor: pointer;
     color: var(--primary-text);
     transition: color 0.3s, border-bottom 0.3s;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 4px 0;
 }
 
 .nav-bar-list div:hover {
@@ -52,11 +59,12 @@ nav{
 .nav-bar-list div.active {
     color: var(--accent-primary);
     border-bottom: 2px solid var(--accent-primary);
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .icon {
     color: var(--accent-primary);
+    cursor: pointer;
 }
 
 /* Icon spin animation */
@@ -69,30 +77,21 @@ nav{
 }
 
 @keyframes rotatePositive {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 
 @keyframes rotateNegative {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(-360deg);
-    }
+    from { transform: rotate(0deg); }
+    to { transform: rotate(-360deg); }
 }
 
 /* Hamburger Icon */
 .hamburger {
     display: none;
-    font-size: 2rem;
+    font-size: 1.8rem;
     cursor: pointer;
+    color: var(--primary-text);
 }
 
 /* Mobile Styles */
@@ -110,15 +109,16 @@ nav{
         flex-direction: column;
         width: 100%;
         background-color: var(--navbar-bg);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
         padding: 1rem;
         position: absolute;
         top: 100%;
         left: 0;
         z-index: 999;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
         border-bottom: 1px solid var(--border-line);
+        gap: 0.5rem;
     }
 
     .nav-bar-list.show {
@@ -127,6 +127,6 @@ nav{
 
     .nav-bar-list div {
         width: 100%;
-        padding: 0.5rem 0;
+        padding: 0.6rem 0;
     }
 }

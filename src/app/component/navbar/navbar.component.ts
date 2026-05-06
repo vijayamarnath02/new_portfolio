@@ -19,11 +19,12 @@ export class NavbarComponent implements OnInit {
   activeSection = 'home';
   mobileMenuOpen = false;
 
-  private readonly sections = ['about', 'skills', 'experience', 'projects', 'contact'];
+  private readonly sections = ['about', 'skills', 'experience', 'projects', 'achievements', 'contact'];
 
   constructor(@Inject(PLATFORM_ID) private platformId: object) {}
 
   ngOnInit(): void {
+    if (!isPlatformBrowser(this.platformId)) return;
     const saved = localStorage.getItem(THEME);
     this.isDarkMode = saved
       ? saved === 'dark'

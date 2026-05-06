@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ChatboatComponent } from "../../chatboat/chatboat.component";
 import { AboutComponent } from "../../component/about/about.component";
+import { AchievementsComponent } from '../../component/achievements/achievements.component';
 import { ContactComponent } from '../../component/contact/contact.component';
 import { ExperienceComponent } from "../../component/experience/experience.component";
 import { FooterComponent } from "../../component/footer/footer.component";
@@ -11,7 +12,7 @@ import { SkilsComponent } from "../../component/skils/skils.component";
 
 @Component({
   selector: 'app-homepage',
-  imports: [NavbarComponent, FooterComponent, HeroComponent, AboutComponent, SkilsComponent, ExperienceComponent, ProjectComponent, ContactComponent, ChatboatComponent],
+  imports: [NavbarComponent, FooterComponent, HeroComponent, AboutComponent, SkilsComponent, ExperienceComponent, ProjectComponent, ContactComponent, ChatboatComponent, AchievementsComponent],
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.css'
 })

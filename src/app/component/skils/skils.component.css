@@ -8,7 +8,7 @@
 
 .header {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 48px;
 }
 
 .header h2 {
@@ -19,12 +19,16 @@
 .header p {
     color: var(--secondary-text);
     margin-top: 20px;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
 }
 
 /* ── Categorized skill grid ── */
 .skill-categories {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 24px;
 }
 
@@ -32,21 +36,49 @@
     background: var(--card-background);
     border: 1px solid var(--border-line);
     border-radius: 16px;
-    padding: 20px 24px;
-    transition: border-color 0.25s ease;
+    padding: 24px 24px 20px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-category::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--gradient-primary);
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .skill-category:hover {
     border-color: var(--accent-primary);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px var(--accent-glow);
+}
+
+.skill-category:hover::before {
+    opacity: 1;
 }
 
 .category-title {
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     font-weight: 700;
     color: var(--accent-primary);
     text-transform: uppercase;
-    letter-spacing: 0.06em;
-    margin: 0 0 14px;
+    letter-spacing: 0.08em;
+    margin: 0 0 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.category-title::before {
+    content: '▪';
+    font-size: 0.9rem;
 }
 
 .skill-chips {
@@ -59,19 +91,23 @@
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    padding: 5px 12px;
+    padding: 6px 14px;
     background: var(--background-color);
     border: 1px solid var(--border-line);
-    border-radius: 999px;
+    border-radius: 10px;
     font-size: 0.82rem;
     color: var(--primary-text);
-    transition: border-color 0.2s ease, color 0.2s ease;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: default;
+    font-weight: 500;
 }
 
 .skill-chip:hover {
     border-color: var(--accent-primary);
     color: var(--accent-primary);
+    background: color-mix(in srgb, var(--accent-primary) 6%, transparent);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--accent-glow);
 }
 
 .chip-icon {
