@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, QueryList, ViewChildren } from '@angular/core';
+import { Component, ElementRef, HostListener, QueryList, ViewChildren, OnInit, AfterViewInit } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { Inject, PLATFORM_ID } from '@angular/core';
 
@@ -19,7 +19,7 @@ interface Achievement {
   templateUrl: './achievements.component.html',
   styleUrl: './achievements.component.css'
 })
-export class AchievementsComponent {
+export class AchievementsComponent implements OnInit, AfterViewInit {
   hasAnimated = false;
 
   achievements: Achievement[] = [
@@ -30,7 +30,7 @@ export class AchievementsComponent {
       direction: '↓',
       label: 'Deployment Lead Time',
       description: 'Micro Frontend Architecture',
-      currentValue: 0
+      currentValue: 40
     },
     {
       icon: '⚡',
@@ -39,7 +39,7 @@ export class AchievementsComponent {
       direction: '↓',
       label: 'Redundant HTTP Calls',
       description: 'RxJS + Caching',
-      currentValue: 0
+      currentValue: 35
     },
     {
       icon: '📦',
@@ -48,7 +48,7 @@ export class AchievementsComponent {
       direction: '↓',
       label: 'Initial Bundle Size',
       description: 'Lazy Loading + Code Splitting',
-      currentValue: 0
+      currentValue: 25
     },
     {
       icon: '🔄',
@@ -57,23 +57,39 @@ export class AchievementsComponent {
       direction: '↓',
       label: 'Unnecessary Re-renders',
       description: 'OnPush + trackBy',
-      currentValue: 0
+      currentValue: 60
     }
   ];
 
   constructor(
     private el: ElementRef,
     @Inject(PLATFORM_ID) private platformId: object
-  ) {}
+  ) { }
+
+  ngOnInit(): void {
+    // Initial check in case it's already in view (ssr-safe)
+  }
+
+  ngAfterViewInit(): void {
+    // Check after view init to ensure element is rendered
+    setTimeout(() => {
+      this.checkScroll();
+    }, 500);
+  }
 
   @HostListener('window:scroll')
   onScroll(): void {
+    this.checkScroll();
+  }
+
+  private checkScroll(): void {
     if (!isPlatformBrowser(this.platformId) || this.hasAnimated) return;
 
     const rect = this.el.nativeElement.getBoundingClientRect();
     const windowHeight = window.innerHeight;
 
-    if (rect.top < windowHeight * 0.75) {
+    // Trigger when top of element is 85% down the viewport
+    if (rect.top < windowHeight * 0.85) {
       this.hasAnimated = true;
       this.animateCountUp();
     }
