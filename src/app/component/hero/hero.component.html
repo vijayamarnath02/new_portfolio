@@ -5,29 +5,39 @@
             <div class="hero-content">
                 <div class="available-badge">
                     <span class="badge-dot"></span>
-                    Available for Hire
+                    Open to Full-Stack &amp; Mobile Roles
                 </div>
 
                 <h2 class="hero-greeting">Hello, I'm</h2>
                 <h1 class="hero-name">Vijay Amarnath M V</h1>
 
                 <h3 class="typewriter-row">
-                    <span class="typing">Angular Developer • UI Enthusiast • Frontend Specialist</span>
+                    <span class="typing">MEAN Stack Developer</span>
                 </h3>
 
+                <p class="hero-sub-headline">Building Enterprise SPAs &amp; Hybrid Mobile Apps</p>
+                <p class="hero-tagline">Angular 17 &bull; Node.js &bull; Express &bull; MongoDB &bull; Ionic &bull; TypeScript</p>
+
                 <p class="hero-desc">
-                    A dedicated Angular developer with {{ experienceText }} year of experience creating responsive,
-                    high-performance web applications. I enjoy building clean, interactive UIs that
-                    deliver seamless user experiences.
+                    MEAN Stack Developer with 1.8+ years of experience building enterprise-grade Single Page Applications
+                    and cross-platform mobile apps. Currently at Purpleslate delivering Angular 17 Micro Frontends —
+                    and available for freelance Ionic + Angular mobile projects.
                 </p>
 
                 <div class="hero-buttons">
-                    <button class="btn btn-primary" (click)="navigateTo('projects')">View Projects</button>
-                    <button class="btn btn-secondary" (click)="navigateTo('contact')">Contact Me</button>
+                    <button class="btn btn-primary" (click)="navigateTo('projects')">View My Work</button>
+                    <button class="btn btn-secondary" (click)="navigateTo('contact')">Get in Touch</button>
                     <a class="btn btn-outline" href="assets/VIJAY_AMARNATH_M_V_RESUME.pdf"
                         download="Vijay_Amarnath_M_V_Resume.pdf">
-                        <fa-icon [icon]="faDownload"></fa-icon>&nbsp;Resume
+                        <fa-icon [icon]="faDownload"></fa-icon>&nbsp;Download Resume
                     </a>
+                </div>
+
+                <div class="hero-stats-row">
+                    <div class="hero-stat-card" *ngFor="let s of heroStats">
+                        <span class="hero-stat-value">{{s.direction}} {{s.value}}</span>
+                        <span class="hero-stat-label">{{s.label}}</span>
+                    </div>
                 </div>
 
                 <div class="social">
@@ -55,7 +65,7 @@
                 <div class="float-badge badge-angular">Angular</div>
                 <div class="float-badge badge-ts">TypeScript</div>
                 <div class="float-badge badge-node">Node.js</div>
-                <div class="float-badge badge-react">React</div>
+                <div class="float-badge badge-react">Ionic</div>
             </div>
 
         </div>

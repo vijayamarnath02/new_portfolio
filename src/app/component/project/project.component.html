@@ -5,9 +5,8 @@
         </section>
         <div>
             <p>
-                Here are some of my recent Angular projects. Each one presented unique challenges and learning<br>
-                opportunities that helped
-                me grow as a developer.
+                Real projects from enterprise production work, internship, and freelance engagements —
+                spanning Angular Micro Frontends, full-stack MEAN, and cross-platform Ionic mobile apps.
             </p>
         </div>
     </div>
@@ -31,9 +30,15 @@
                     {{ project.description }}
                 </p>
 
+                <p class="project-note" *ngIf="project.note">🔒 {{project.note}}</p>
+
                 <div class="project-links">
-                    <a [href]="project?.demoUrl" target="_blank" [download]="project?.download">🔗 Live Demo</a>
-                    <a [href]="project?.githubUrl" target="_blank">🛠 Source Code</a>
+                    <a *ngIf="project.demoUrl" [href]="project.demoUrl" target="_blank"
+                        [download]="project.download ? 'app.apk' : null">🔗 Live Demo</a>
+                    <span *ngIf="!project.demoUrl" class="badge-private">No Demo</span>
+
+                    <a *ngIf="project.githubUrl" [href]="project.githubUrl" target="_blank">🛠 Source Code</a>
+                    <span *ngIf="!project.githubUrl" class="badge-private">Not Public</span>
                 </div>
             </div>
         </div>

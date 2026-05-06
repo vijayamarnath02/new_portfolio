@@ -5,17 +5,20 @@
             <h2 class="gradient-text">Technical <span class="gradient">Skills</span></h2>
         </section>
         <p>
-            Through my experience with Angular development, I've gained proficiency in various technologies
-            and tools. Here's an overview of my technical expertise.
+            Full JavaScript stack expertise across frontend, backend, mobile, and architecture —
+            built through enterprise production work and freelance projects.
         </p>
     </div>
 
-    <div class="skills-cards">
-        <div class="skill-card" *ngFor="let skill of skills" [matTooltip]="skill.name">
-            <div class="skill-icon-wrap">
-                <img [src]="skill.icon" [alt]="skill.name" />
+    <div class="skill-categories">
+        <div class="skill-category" *ngFor="let cat of skillCategories">
+            <h3 class="category-title">{{cat.title}}</h3>
+            <div class="skill-chips">
+                <div class="skill-chip" *ngFor="let skill of cat.skills" [matTooltip]="skill.name">
+                    <img *ngIf="skill.icon" [src]="skill.icon" [alt]="skill.name" class="chip-icon" />
+                    <span class="chip-name">{{skill.name}}</span>
+                </div>
             </div>
-            <p class="skill-name">{{ skill.name }}</p>
         </div>
     </div>
 

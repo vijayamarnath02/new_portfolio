@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faDownload, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { EMAIL, GITHUB, LINKEDIN, PHONE } from '../../../constents';
 @Component({
   selector: 'app-hero',
-  imports: [FontAwesomeModule],
+  imports: [FontAwesomeModule, CommonModule],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.css',
 })
@@ -15,6 +16,13 @@ export class HeroComponent {
   faGithub = faGithub;
   faLinkedin = faLinkedin;
   faDownload = faDownload;
+
+  heroStats = [
+    { value: '40%', label: 'Deployment Time', direction: '↓' },
+    { value: '35%', label: 'HTTP API Calls', direction: '↓' },
+    { value: '25%', label: 'Bundle Size', direction: '↓' },
+  ];
+
   userData = {
     linkedin: LINKEDIN,
     github: GITHUB,
@@ -27,13 +35,5 @@ export class HeroComponent {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
-  }
-  get experienceText(): string {
-    const start = new Date(2024, 8, 16); // Sep 16, 2024
-    const now = new Date();
-    const totalMonths =
-      (now.getFullYear() - start.getFullYear()) * 12 +
-      (now.getMonth() - start.getMonth());
-    return (totalMonths / 12).toFixed(1) + '+';
   }
 }

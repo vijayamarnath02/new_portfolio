@@ -10,82 +10,76 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 })
 export class ProjectComponent implements OnInit {
   selectedTech = 'All';
+
   projects = [
     {
       id: 1,
-      title: "E-Commerce Dashboard",
-      description: "A responsive admin dashboard for an e-commerce platform with real-time analytics, inventory management, and order processing.",
-      image: "https://images.pexels.com/photos/39284/macbook-apple-imac-computer-39284.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      technologies: ["Angular", "TypeScript", "NgRx", "Chart.js", "Angular Material"],
-      category: "angular",
-      demoUrl: "https://example.com/demo1",
-      githubUrl: "https://github.com/example/project1",
+      title: 'Import-Export Business Approver',
+      description: 'Enterprise multi-module application managing approval workflows for import-export operations — role-based approvals, dynamic form processing, document verification, and real-time status tracking, built on Angular Micro Frontend architecture.',
+      image: 'https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      technologies: ['Angular 17', 'Module Federation', 'RxJS', 'Akita', 'TypeScript', 'RBAC'],
+      category: 'Angular',
+      demoUrl: null,
+      githubUrl: null,
+      note: 'Production work at Purpleslate — code not publicly available',
       download: false
     },
     {
       id: 2,
-      title: "Task Management App",
-      description: "A productivity application that allows users to create, organize, and track tasks with features like drag-and-drop, filters, and due dates.",
-      image: "https://images.pexels.com/photos/7148384/pexels-photo-7148384.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      technologies: ["Angular", "TypeScript", "RxJS", "Firebase", "Bootstrap"],
-      category: "angular",
-      demoUrl: "https://example.com/demo2",
-      githubUrl: "https://github.com/example/project2", download: false
+      title: 'Deployment Timeline Manager',
+      description: 'Full-stack tool for tracking deployment timelines and statuses across agile teams. Includes automated email notifications via Nodemailer and a reusable npm component package built with Rollup.',
+      image: 'https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      technologies: ['Node.js', 'Express', 'React', 'Tailwind CSS', 'Nodemailer'],
+      category: 'Node.js',
+      demoUrl: null,
+      githubUrl: null,
+      note: null,
+      download: false
     },
-
     {
       id: 3,
-      title: "Weather Forecast App",
-      description: "A weather application that provides current conditions and forecasts for locations worldwide using modern UI components and animations.",
-      image: "https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      technologies: ["Angular", "Ionic", "TypeScript", "OpenWeatherMap API", "SCSS"],
-      category: "angular",
-      demoUrl: "../../../assetes/app-debug.apk",
-      githubUrl: "https://github.com/vijayamarnath02/Weather_App",
-      download: true
+      title: 'Employee Management System',
+      description: 'End-to-end employee records and attendance management system with full CRUD operations, MongoDB schema design, Angular Material UI, and reactive form validation.',
+      image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      technologies: ['Angular', 'Node.js', 'Express', 'MongoDB', 'Mongoose'],
+      category: 'MEAN Stack',
+      demoUrl: null,
+      githubUrl: null,
+      note: null,
+      download: false
     },
     {
       id: 4,
-      title: "Personal Finance Tracker",
-      description: "A full-stack application that helps users track income, expenses, and savings with interactive charts and budget planning tools.",
-      image: "https://images.pexels.com/photos/6693661/pexels-photo-6693661.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      technologies: ["Angular", "Node.js", "Express", "MongoDB", "D3.js"],
-      category: "fullstack",
-      demoUrl: "https://example.com/demo4",
-      githubUrl: "https://github.com/example/project4",
+      title: 'Ionic Hybrid Mobile App',
+      description: 'Cross-platform hybrid mobile application built for a freelance client. Runs on both Android and iOS from a single Angular codebase, with native device features integrated via Capacitor.',
+      image: 'https://images.pexels.com/photos/607812/pexels-photo-607812.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      technologies: ['Ionic', 'Angular', 'Capacitor', 'TypeScript', 'RxJS'],
+      category: 'Ionic',
+      demoUrl: null,
+      githubUrl: null,
+      note: null,
       download: false
     },
     {
       id: 5,
-      title: "Recipe Finder",
-      description: "A web application that allows users to search for recipes based on ingredients, dietary restrictions, and cuisine types.",
-      image: "https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      technologies: ["TypeScript", "React", "Redux", "Spoonacular API"],
-      category: "typescript",
-      demoUrl: "https://example.com/demo5",
-      githubUrl: "https://github.com/example/project5",
-      download: false
+      title: 'Weather Forecast App',
+      description: 'A weather application built with Ionic + Angular providing current conditions and forecasts for locations worldwide using the OpenWeatherMap API, with smooth animations and cross-platform support.',
+      image: 'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      technologies: ['Ionic', 'Angular', 'TypeScript', 'OpenWeatherMap API', 'SCSS'],
+      category: 'Ionic',
+      demoUrl: '../../../assetes/app-debug.apk',
+      githubUrl: 'https://github.com/vijayamarnath02/Weather_App',
+      note: null,
+      download: true
     },
-    {
-      id: 6,
-      title: "Fitness Tracking App",
-      description: "An application that allows users to track workouts, set fitness goals, and monitor progress with visualizations and reminders.",
-      image: "https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      technologies: ["Angular", "TypeScript", "NgRx", "Chart.js", "Firebase"],
-      category: "angular",
-      demoUrl: "https://example.com/demo6",
-      githubUrl: "https://github.com/example/project6",
-      download: false
-    }
   ];
-  filteredProjects: any = [];
-  uniqueTechnologies: string[] = ['Angular', 'TypeScript', 'Node.js', 'React'];
+
+  filteredProjects: any[] = [];
+  uniqueTechnologies: string[] = ['Angular', 'Node.js', 'MEAN Stack', 'Ionic'];
 
   ngOnInit(): void {
-
     this.filterProjects('All');
   }
-
 
   filterProjects(tech: string): void {
     this.selectedTech = tech;
@@ -93,7 +87,7 @@ export class ProjectComponent implements OnInit {
       this.filteredProjects = this.projects;
     } else {
       this.filteredProjects = this.projects.filter(project =>
-        project.technologies.includes(tech)
+        project.category === tech
       );
     }
   }

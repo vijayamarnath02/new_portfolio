@@ -171,3 +171,24 @@
         grid-template-columns: 1fr;
     }
 }
+
+/* ── Highlights pills ── */
+.about-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 16px;
+    margin-bottom: 20px;
+}
+
+.highlight-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    background: var(--background-color);
+    border: 1px solid var(--border-line);
+    border-radius: 999px;
+    font-size: 0.85rem;
+    color: var(--secondary-text);
+}

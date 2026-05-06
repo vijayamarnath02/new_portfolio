@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="header">
+        <section id="experience">
+            <h2 class="gradient-text">Work <span class="gradient">Experience</span></h2>
+        </section>
+        <p class="section-sub">My professional journey across enterprise, internship, and freelance work.</p>
+    </div>
+
+    <div class="timeline">
+        <div class="timeline-item"
+             *ngFor="let exp of experiences; let last = last"
+             [class.is-current]="exp.current">
+
+            <div class="timeline-marker">
+                <div class="timeline-dot"></div>
+                <div class="timeline-line" *ngIf="!last"></div>
+            </div>
+
+            <div class="timeline-card">
+                <div class="card-top">
+                    <div class="card-title-group">
+                        <h3 class="exp-title">{{exp.title}}</h3>
+                        <p class="exp-company">{{exp.company}} &bull; {{exp.location}}</p>
+                    </div>
+                    <div class="card-meta">
+                        <span class="exp-period">{{exp.period}}</span>
+                        <span class="exp-badge" [ngClass]="getBadgeClass(exp.type)">{{exp.type}}</span>
+                    </div>
+                </div>
+
+                <p class="exp-project" *ngIf="exp.project">
+                    <strong>Project:</strong> {{exp.project}}
+                </p>
+
+                <ul class="exp-highlights">
+                    <li *ngFor="let h of exp.highlights">{{h}}</li>
+                </ul>
+
+                <div class="exp-tech">
+                    <span class="tech-tag" *ngFor="let t of exp.tech">{{t}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -19,7 +19,7 @@ export class NavbarComponent implements OnInit {
   activeSection = 'home';
   mobileMenuOpen = false;
 
-  private readonly sections = ['about', 'skills', 'projects', 'contact'];
+  private readonly sections = ['about', 'skills', 'experience', 'projects', 'contact'];
 
   constructor(@Inject(PLATFORM_ID) private platformId: object) {}
 

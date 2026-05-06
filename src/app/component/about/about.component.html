@@ -4,7 +4,7 @@
         <section id="about">
             <h2 class="gradient-text">About <span class="gradient"> Me</span></h2>
         </section>
-        <p class="section-sub">Passionate developer building modern, responsive web experiences.</p>
+        <p class="section-sub">MEAN Stack Developer building enterprise SPAs and cross-platform mobile apps.</p>
     </div>
 
     <div class="about-body">
@@ -15,17 +15,21 @@
         </div>
 
         <div class="about-text">
-            <h3>Angular Developer with a Passion for Building Web Applications</h3>
+            <h3>MEAN Stack Developer | Full-Stack &amp; Mobile</h3>
 
             <p class="par">
-                I'm Vijay Amarnath, an Angular developer with a year of professional experience creating
-                responsive and dynamic web applications. I'm passionate about front-end development and
-                constantly learning new technologies to improve my skills.
+                MEAN Stack Developer with 1.8+ years of hands-on experience building enterprise-grade Single Page
+                Applications and full-stack solutions. Currently shipping production features at Purpleslate on a
+                Micro Frontend platform powering import-export approval workflows for enterprise clients.
             </p>
             <p class="par">
-                My journey in web development started with a strong foundation in HTML, CSS, and JavaScript.
-                I then specialised in Angular, gaining expertise in building scalable and maintainable
-                applications.
+                I work across the full JavaScript stack — Angular on the frontend, Node.js + Express on the backend,
+                MongoDB for data, and Ionic for cross-platform mobile — with a strong foundation in TypeScript, RxJS,
+                and reactive architecture.
+            </p>
+            <p class="par">
+                Outside of full-time work, I take on freelance projects building hybrid mobile applications using
+                Ionic + Angular, giving me end-to-end ownership experience from client requirements to deployment.
             </p>
 
             <div class="stats-grid">
@@ -53,9 +57,16 @@
                 <div class="stat-card">
                     <fa-icon [icon]="faGraduationCap"></fa-icon>
                     <div>
-                        <span class="stat-number">B.E</span>
-                        <span class="stat-label">Information Technology</span>
+                        <span class="stat-number">B.Tech</span>
+                        <span class="stat-label">Karpagam College of Engineering</span>
                     </div>
+                </div>
+            </div>
+
+            <div class="about-highlights">
+                <div class="highlight-item" *ngFor="let h of highlights">
+                    <span>{{h.icon}}</span>
+                    <span>{{h.text}}</span>
                 </div>
             </div>
 

@@ -164,3 +164,21 @@
     line-height: 1.5rem;
     max-height: calc(1.5rem * 3);
 }
+
+.project-note {
+    font-size: 0.78rem;
+    color: var(--secondary-text);
+    margin-top: 8px;
+    font-style: italic;
+}
+
+.badge-private {
+    font-size: 0.75rem;
+    padding: 3px 10px;
+    border-radius: 999px;
+    background: var(--background-color);
+    color: var(--secondary-text);
+    border: 1px solid var(--border-line);
+    display: inline-flex;
+    align-items: center;
+}
