@@ -5,14 +5,32 @@
             <h2 class="gradient-text">Technical <span class="gradient">Skills</span></h2>
         </section>
         <p>
-            Full JavaScript stack expertise across frontend, backend, mobile, and architecture —
-            built through enterprise production work and freelance projects.
+            Full JavaScript stack capability shaped by enterprise product work, ERP delivery, and freelance mobile execution.
         </p>
+    </div>
+
+    <div class="skills-signal-grid">
+        <div class="signal-card">
+            <strong>Enterprise UI</strong>
+            <span>Angular, reactive forms, RBAC, shared components</span>
+        </div>
+        <div class="signal-card">
+            <strong>Backend APIs</strong>
+            <span>Node.js, Express, auth flows, production integration</span>
+        </div>
+        <div class="signal-card">
+            <strong>Mobile Delivery</strong>
+            <span>Ionic + Angular apps for Android and iOS use cases</span>
+        </div>
     </div>
 
     <div class="skill-categories">
         <div class="skill-category" *ngFor="let cat of skillCategories">
-            <h3 class="category-title">{{cat.title}}</h3>
+            <div class="category-head">
+                <h3 class="category-title">{{cat.title}}</h3>
+                <span class="category-tag">{{cat.tag}}</span>
+            </div>
+            <p class="category-summary">{{cat.summary}}</p>
             <div class="skill-chips">
                 <div class="skill-chip" *ngFor="let skill of cat.skills" [matTooltip]="skill.name">
                     <img *ngIf="skill.icon" [src]="skill.icon" [alt]="skill.name" class="chip-icon" />

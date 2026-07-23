@@ -1,7 +1,7 @@
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { Component, HostListener, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faMoon, faSun, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { THEME } from '../../../constents';
 
 @Component({
@@ -14,10 +14,21 @@ import { THEME } from '../../../constents';
 export class NavbarComponent implements OnInit {
   faSun = faSun;
   faMoon = faMoon;
+  faBars = faBars;
+  faXmark = faXmark;
   isDarkMode = false;
   animate: 'positive' | 'negative' | null = null;
   activeSection = 'home';
   mobileMenuOpen = false;
+  navItems = [
+    { id: 'home', label: 'Home' },
+    { id: 'about', label: 'About' },
+    { id: 'skills', label: 'Skills' },
+    { id: 'experience', label: 'Experience' },
+    { id: 'projects', label: 'Projects' },
+    { id: 'achievements', label: 'Achievements' },
+    { id: 'contact', label: 'Contact' },
+  ];
 
   private readonly sections = ['about', 'skills', 'experience', 'projects', 'achievements', 'contact'];
 

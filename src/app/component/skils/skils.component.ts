@@ -9,12 +9,15 @@ import { MatTooltipModule } from '@angular/material/tooltip';
   styleUrl: './skils.component.css'
 })
 export class SkilsComponent implements OnInit {
-  skillCategories: { title: string; skills: { name: string; icon: string }[] }[] = [];
+  skillCategories: { title: string; tag: string; summary: string; skills: { name: string; icon: string }[] }[] = [];
 
   ngOnInit() {
     this.skillCategories = [
       {
-        title: 'Frontend (Production-grade)', skills: [
+        title: 'Frontend (Production-grade)',
+        tag: 'Primary Stack',
+        summary: 'Angular-heavy delivery for enterprise UX, reactive workflows, shared components, and micro frontend architecture.',
+        skills: [
           { name: 'Angular 14-17', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg' },
           { name: 'TypeScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg' },
           { name: 'JavaScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
@@ -35,7 +38,10 @@ export class SkilsComponent implements OnInit {
         ]
       },
       {
-        title: 'Backend', skills: [
+        title: 'Backend',
+        tag: 'API Delivery',
+        summary: 'REST APIs, middleware, authentication, and business logic integration using Node.js and Express.',
+        skills: [
           { name: 'Node.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
           { name: 'Express.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg' },
           { name: 'REST API Design', icon: '' },
@@ -47,7 +53,10 @@ export class SkilsComponent implements OnInit {
         ]
       },
       {
-        title: 'Database', skills: [
+        title: 'Database',
+        tag: 'Data Layer',
+        summary: 'MongoDB-backed application work with schema design, CRUD patterns, and aggregation-focused data handling.',
+        skills: [
           { name: 'MongoDB', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' },
           { name: 'Mongoose ODM', icon: '' },
           { name: 'Schema Design', icon: '' },
@@ -56,7 +65,10 @@ export class SkilsComponent implements OnInit {
         ]
       },
       {
-        title: 'Mobile (Freelance)', skills: [
+        title: 'Mobile (Freelance)',
+        tag: 'Client Delivery',
+        summary: 'Cross-platform Ionic applications with Angular, mobile-first UI, and end-to-end freelance execution.',
+        skills: [
           { name: 'Ionic Framework', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ionic/ionic-original.svg' },
           { name: 'Capacitor', icon: '' },
           { name: 'Hybrid Mobile Apps', icon: '' },
@@ -66,7 +78,10 @@ export class SkilsComponent implements OnInit {
         ]
       },
       {
-        title: 'Architecture & Tools', skills: [
+        title: 'Architecture & Tools',
+        tag: 'System Thinking',
+        summary: 'Scalable frontend structure, access control, component libraries, and modern delivery workflows.',
+        skills: [
           { name: 'Micro Frontend', icon: '' },
           { name: 'SOLID Principles', icon: '' },
           { name: 'Reusable Component Libraries', icon: '' },
@@ -80,7 +95,10 @@ export class SkilsComponent implements OnInit {
         ]
       },
       {
-        title: 'AI Tools', skills: [
+        title: 'AI Tools',
+        tag: 'Accelerators',
+        summary: 'AI-assisted development tools used to improve speed, debugging, prototyping, and day-to-day productivity.',
+        skills: [
           { name: 'Claude (Anthropic)', icon: '' },
           { name: 'Antigravity (Google DeepMind)', icon: '' },
           { name: 'GitHub Copilot', icon: '' },

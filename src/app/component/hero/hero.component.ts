@@ -23,9 +23,22 @@ export class HeroComponent {
   resumeDownloadName = RESUME_DOWNLOAD_NAME;
 
   heroStats = [
-    { value: '40%', label: 'Deployment Time', direction: '↓' },
-    { value: '35%', label: 'HTTP API Calls', direction: '↓' },
-    { value: '25%', label: 'Bundle Size', direction: '↓' },
+    { value: '2.5+', label: 'Years Across MEAN', direction: '' },
+    { value: '6', label: 'MFE Modules Shipped', direction: '' },
+    { value: '30+', label: 'REST APIs Worked On', direction: '' },
+    { value: '5', label: 'Business Roles Supported', direction: '' },
+  ];
+
+  heroProofPoints = [
+    'Enterprise approval workflows',
+    'ERP software delivery',
+    'Hybrid mobile app builds',
+  ];
+
+  deliverySignals = [
+    { label: 'Current Focus', value: 'Angular Micro Frontends' },
+    { label: 'Backend Stack', value: 'Node.js + Express + MongoDB' },
+    { label: 'Delivery Mode', value: 'Full-time + Freelance' },
   ];
 
   userData = {

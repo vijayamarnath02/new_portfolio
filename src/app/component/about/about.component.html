@@ -8,28 +8,58 @@
     </div>
 
     <div class="about-body">
-        <div class="about-image-wrap">
-            <img src="https://images.pexels.com/photos/4974915/pexels-photo-4974915.jpeg?auto=compress&cs=tinysrgb&w=700"
-                alt="Vijay Amarnath" />
-            <div class="image-decoration"></div>
+        <div class="career-snapshot">
+            <div class="snapshot-card snapshot-intro">
+                <span class="snapshot-label">Career Snapshot</span>
+                <h3>{{ experienceText }} Years of MEAN Stack Delivery</h3>
+                <p>
+                    Building enterprise applications with Angular, Node.js, MongoDB, and Ionic across product teams,
+                    ERP workflows, and freelance mobile delivery.
+                </p>
+            </div>
+
+            <div class="snapshot-metrics">
+                <div class="snapshot-metric">
+                    <span class="metric-value">6</span>
+                    <span class="metric-label">Micro Frontends Delivered</span>
+                </div>
+                <div class="snapshot-metric">
+                    <span class="metric-value">30+</span>
+                    <span class="metric-label">REST APIs Worked On</span>
+                </div>
+                <div class="snapshot-metric">
+                    <span class="metric-value">3</span>
+                    <span class="metric-label">Work Modes: Product, ERP, Freelance</span>
+                </div>
+            </div>
+
+            <div class="snapshot-card snapshot-track">
+                <div class="track-row" *ngFor="let marker of careerMarkers">
+                    <span class="track-phase">{{ marker.phase }}</span>
+                    <div>
+                        <strong>{{ marker.title }}</strong>
+                        <p>{{ marker.detail }}</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="about-text">
-            <h3>MEAN Stack Developer | Full-Stack &amp; Mobile</h3>
+            <h3>MEAN Stack Developer Focused on Business-Critical Products</h3>
 
             <p class="par">
-                MEAN Stack Developer with {{ experienceText }} years of hands-on experience building enterprise-grade Single Page
-                Applications and full-stack solutions. Currently shipping production features at Purpleslate on a
-                Micro Frontend platform powering import-export approval workflows for enterprise clients.
+                With {{ experienceText }} years of hands-on experience, I build business-facing software that has to be
+                stable, scalable, and easy for teams to work with. My recent work spans Angular micro frontends,
+                approval workflow systems, ERP modules, and hybrid mobile applications.
             </p>
             <p class="par">
-                I work across the full JavaScript stack — Angular on the frontend, Node.js + Express on the backend,
-                MongoDB for data, and Ionic for cross-platform mobile — with a strong foundation in TypeScript, RxJS,
-                and reactive architecture.
+                I work across the full JavaScript stack: Angular on the frontend, Node.js + Express on the backend,
+                MongoDB for the data layer, and Ionic for cross-platform mobile delivery. That combination lets me move
+                comfortably between UI architecture, business logic, and production integration.
             </p>
             <p class="par">
-                Outside of full-time work, I take on freelance projects building hybrid mobile applications using
-                Ionic + Angular, giving me end-to-end ownership experience from client requirements to deployment.
+                Outside full-time product work, I also handle freelance projects end-to-end, which has strengthened my
+                ownership across requirement gathering, implementation, testing, and release preparation.
             </p>
 
             <div class="stats-grid">
@@ -37,29 +67,36 @@
                     <fa-icon [icon]="faBriefcase"></fa-icon>
                     <div>
                         <span class="stat-number">{{ experienceText }}</span>
-                        <span class="stat-label">Years Experience</span>
+                        <span class="stat-label">Years of Delivery</span>
                     </div>
                 </div>
                 <div class="stat-card">
                     <fa-icon [icon]="faAward"></fa-icon>
                     <div>
-                        <span class="stat-number">5+</span>
-                        <span class="stat-label">Projects Completed</span>
+                        <span class="stat-number">30+</span>
+                        <span class="stat-label">API Endpoints &amp; Integrations</span>
                     </div>
                 </div>
                 <div class="stat-card">
                     <fa-icon [icon]="faCalendar"></fa-icon>
                     <div>
-                        <span class="stat-number">Open</span>
-                        <span class="stat-label">Available for Hire</span>
+                        <span class="stat-number">6</span>
+                        <span class="stat-label">Micro Frontend Modules</span>
                     </div>
                 </div>
                 <div class="stat-card">
                     <fa-icon [icon]="faGraduationCap"></fa-icon>
                     <div>
-                        <span class="stat-number">B.Tech</span>
-                        <span class="stat-label">Karpagam College of Engineering</span>
+                        <span class="stat-number">ERP</span>
+                        <span class="stat-label">Plus Enterprise Workflow Delivery</span>
                     </div>
+                </div>
+            </div>
+
+            <div class="expertise-grid">
+                <div class="expertise-card" *ngFor="let pillar of expertisePillars">
+                    <h4>{{ pillar.title }}</h4>
+                    <p>{{ pillar.copy }}</p>
                 </div>
             </div>
 

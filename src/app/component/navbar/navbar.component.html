@@ -1,23 +1,45 @@
-<nav style="width: 100%; box-sizing: border-box;">
+<nav>
     <div class="content">
-        <div class="logo">VA</div>
-        <div class="hamburger" (click)="toggleMobileMenu()">
-            &#9776;
-        </div>
-        <div class="nav-bar-list" [class.show]="mobileMenuOpen">
-            <div [class.active]="activeSection === 'home'" (click)="navigateTo('home')">Home</div>
-            <div [class.active]="activeSection === 'about'" (click)="navigateTo('about')">About</div>
-            <div [class.active]="activeSection === 'skills'" (click)="navigateTo('skills')">Skills</div>
-            <div [class.active]="activeSection === 'experience'" (click)="navigateTo('experience')">Experience</div>
-            <div [class.active]="activeSection === 'projects'" (click)="navigateTo('projects')">Projects</div>
-            <div [class.active]="activeSection === 'achievements'" (click)="navigateTo('achievements')">Achievements</div>
-            <div [class.active]="activeSection === 'contact'" (click)="navigateTo('contact')">Contact</div>
+        <button class="brand" type="button" (click)="navigateTo('home')">
+            <span class="brand-mark">VA</span>
+            <span class="brand-copy">
+                <strong>Vijay Amarnath</strong>
+                <small>MEAN Stack Developer</small>
+            </span>
+        </button>
 
-            <div class="icon" (click)="toggleTheme()"
+        <div class="nav-shell" [class.show]="mobileMenuOpen">
+            <button
+                class="nav-link"
+                type="button"
+                *ngFor="let item of navItems"
+                [class.active]="activeSection === item.id"
+                (click)="navigateTo(item.id)">
+                {{ item.label }}
+            </button>
+        </div>
+
+        <div class="nav-actions">
+            <button
+                class="theme-toggle"
+                type="button"
+                aria-label="Toggle theme"
+                (click)="toggleTheme()"
                 [ngClass]="{ 'rotate-positive': animate === 'positive', 'rotate-negative': animate === 'negative' }">
-                <fa-icon [icon]="isDarkMode ? faMoon : faSun"
-                    [ngStyle]="{ color: isDarkMode ? 'var(--accent-primary)' : 'inherit' }"></fa-icon>
-            </div>
+                <fa-icon [icon]="isDarkMode ? faMoon : faSun"></fa-icon>
+            </button>
+
+            <button class="contact-cta" type="button" (click)="navigateTo('contact')">
+                Let's Talk
+            </button>
+
+            <button
+                class="hamburger"
+                type="button"
+                aria-label="Toggle menu"
+                (click)="toggleMobileMenu()">
+                <fa-icon [icon]="mobileMenuOpen ? faXmark : faBars"></fa-icon>
+            </button>
         </div>
     </div>
 </nav>

@@ -5,7 +5,7 @@
             <div class="hero-content">
                 <div class="available-badge">
                     <span class="badge-dot"></span>
-                    Open to Full-Stack &amp; Mobile Roles
+                    2.5+ Years in Enterprise MEAN Stack Delivery
                 </div>
 
                 <h2 class="hero-greeting">Hello, I'm</h2>
@@ -15,14 +15,18 @@
                     <span class="typing">MEAN Stack Developer</span>
                 </h3>
 
-                <p class="hero-sub-headline">Building Enterprise SPAs &amp; Hybrid Mobile Apps</p>
+                <p class="hero-sub-headline">Building Enterprise Platforms, ERP Modules &amp; Hybrid Mobile Apps</p>
                 <p class="hero-tagline">Angular 17 &bull; Node.js &bull; Express &bull; MongoDB &bull; Ionic &bull; TypeScript</p>
 
                 <p class="hero-desc">
-                    MEAN Stack Developer with {{ experienceText }} years of experience building enterprise-grade Single Page Applications
-                    and cross-platform mobile apps. Currently at Purpleslate delivering Angular 17 Micro Frontends —
-                    and available for freelance Ionic + Angular mobile projects.
+                    MEAN Stack Developer with {{ experienceText }} years of experience building enterprise-grade web applications,
+                    ERP workflows, and cross-platform mobile products. Currently shipping Angular Micro Frontends at Purpleslate,
+                    with earlier MEAN stack ERP delivery at Digitalsoft Group and ongoing freelance Ionic + Angular work.
                 </p>
+
+                <div class="hero-proof-strip">
+                    <span class="proof-pill" *ngFor="let point of heroProofPoints">{{ point }}</span>
+                </div>
 
                 <div class="hero-buttons">
                     <button class="btn btn-primary" (click)="navigateTo('projects')">View My Work</button>
@@ -62,10 +66,25 @@
                 <div class="avatar-circle">
                     <span class="avatar-initials">VA</span>
                 </div>
-                <div class="float-badge badge-angular">Angular</div>
-                <div class="float-badge badge-ts">TypeScript</div>
-                <div class="float-badge badge-node">Node.js</div>
-                <div class="float-badge badge-react">Ionic</div>
+
+                <div class="visual-panel panel-experience">
+                    <span class="panel-label">Experience</span>
+                    <strong>{{ experienceText }}</strong>
+                    <span class="panel-copy">MEAN stack, ERP, and enterprise product delivery</span>
+                </div>
+
+                <div class="visual-panel panel-domains">
+                    <span class="panel-label">Recent Work</span>
+                    <strong>Approval Workflows</strong>
+                    <span class="panel-copy">6 micro frontends, 30+ APIs, mobile views</span>
+                </div>
+
+                <div class="visual-panel panel-stack">
+                    <div class="stack-row" *ngFor="let signal of deliverySignals">
+                        <span>{{ signal.label }}</span>
+                        <strong>{{ signal.value }}</strong>
+                    </div>
+                </div>
             </div>
 
         </div>
