@@ -22,6 +22,15 @@
     --section-padding: 72px 0;
     --gradient-primary: linear-gradient(135deg, #6C2BD9 0%, #8a4fff 48%, #5824B5 100%);
     --gradient-subtle: linear-gradient(135deg, rgba(108, 43, 217, 0.05), rgba(138, 79, 255, 0.08));
+    --surface-solid: #ffffff;
+    --surface-overlay-1: rgba(255, 255, 255, 0.18);
+    --surface-overlay-2: rgba(255, 255, 255, 0.28);
+    --surface-overlay-3: rgba(255, 255, 255, 0.38);
+    --surface-overlay-4: rgba(255, 255, 255, 0.5);
+    --surface-elevated: rgba(255, 255, 255, 0.92);
+    --shadow-soft: rgba(0, 0, 0, 0.08);
+    --shadow-strong: rgba(0, 0, 0, 0.12);
+    --body-top-wash: linear-gradient(180deg, rgba(255, 255, 255, 0.35), transparent 40%);
 }
 
 .dark-theme {
@@ -39,6 +48,15 @@
     --box-shadow: 0 18px 44px rgba(2, 8, 16, 0.44);
     --gradient-primary: linear-gradient(135deg, #8a4fff 0%, #b07fff 55%, #6C2BD9 100%);
     --gradient-subtle: linear-gradient(135deg, rgba(138, 79, 255, 0.1), rgba(176, 127, 255, 0.1));
+    --surface-solid: #191925;
+    --surface-overlay-1: rgba(255, 255, 255, 0.03);
+    --surface-overlay-2: rgba(255, 255, 255, 0.05);
+    --surface-overlay-3: rgba(255, 255, 255, 0.08);
+    --surface-overlay-4: rgba(255, 255, 255, 0.11);
+    --surface-elevated: rgba(18, 18, 28, 0.96);
+    --shadow-soft: rgba(0, 0, 0, 0.3);
+    --shadow-strong: rgba(0, 0, 0, 0.45);
+    --body-top-wash: linear-gradient(180deg, rgba(0, 0, 0, 0.28), transparent 40%);
 }
 
 *, *::before, *::after {
@@ -61,7 +79,7 @@ body {
     background-image:
         radial-gradient(circle at top left, rgba(108, 43, 217, 0.12), transparent 30%),
         radial-gradient(circle at 85% 18%, rgba(138, 79, 255, 0.12), transparent 22%),
-        linear-gradient(180deg, rgba(255, 255, 255, 0.35), transparent 40%);
+        var(--body-top-wash);
     background-attachment: fixed;
     min-height: 100vh;
     transition: background-color 0.4s ease, color 0.4s ease;
@@ -134,7 +152,7 @@ h2 {
     font-size: 0.78rem;
     font-weight: 700;
     letter-spacing: 0.01em;
-    box-shadow: 0 10px 24px rgba(23, 34, 49, 0.06);
+    box-shadow: 0 10px 24px var(--shadow-soft);
 }
 
 .visual-panel {
@@ -143,7 +161,7 @@ h2 {
     border: 1px solid color-mix(in srgb, var(--accent-primary) 22%, var(--border-line));
     border-radius: 22px;
     padding: 16px 18px;
-    box-shadow: 0 20px 48px rgba(23, 34, 49, 0.12);
+    box-shadow: 0 20px 48px var(--shadow-strong);
     backdrop-filter: blur(12px);
     z-index: 3;
 }
