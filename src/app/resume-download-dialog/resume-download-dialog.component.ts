@@ -4,6 +4,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faFileDownload, faRedoAlt, faSync, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
+import { RESUME_ASSET_URL, RESUME_DOWNLOAD_NAME } from '../../constents';
 @Component({
   selector: 'app-resume-download-dialog',
   standalone: true,
@@ -14,7 +15,8 @@ import { faFileDownload, faRedoAlt, faSync, faThumbsUp } from '@fortawesome/free
 
 })
 export class ResumeDownloadDialogComponent {
-  resumeUrl = 'assets/VIJAY_AMARNATH_M_V_RESUME.pdf';
+  resumeUrl = RESUME_ASSET_URL;
+  resumeDownloadName = RESUME_DOWNLOAD_NAME;
   faThumbsUp = faThumbsUp;
   faFileDownload = faFileDownload;
   faRedoAlt = faRedoAlt;
@@ -29,7 +31,7 @@ export class ResumeDownloadDialogComponent {
     const link = document.createElement('a');
     link.href = this.resumeUrl;
     link.target = '_blank'; // optional
-    link.download = 'Vijay_Amarnath_M_V_Resume.pdf';
+    link.download = this.resumeDownloadName;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

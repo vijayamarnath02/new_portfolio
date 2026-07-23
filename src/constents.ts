@@ -4,21 +4,12 @@ export const LINKEDIN = "https://www.linkedin.com/in/vijay-amarnath-m-v/";
 export const GITHUB = "https://github.com/vijayamarnath02";
 export const THEME = "theme"
 export const ADDRESS = "Chennai, Tamil Nadu, India"
+export const RESUME_ASSET_URL = 'assets/VIJAY_AMARNATH_M_V_RESUME_v2.5.pdf';
+export const RESUME_DOWNLOAD_NAME = 'Vijay_Amarnath_M_V_Resume_v2.5.pdf';
+export const EXPERIENCE_DISPLAY_TEXT = '2.5+';
 
-/** The date you joined Purpleslate as Angular Developer */
-export const JOIN_DATE = new Date(2024, 8, 14); // Sep 14, 2024 (months are 0-indexed)
-
-/**
- * Auto-calculates experience duration from JOIN_DATE to today.
- * Returns a string like "1.8+" that updates automatically every month.
- */
 export function getExperienceText(): string {
-  const now = new Date();
-  const totalMonths =
-    (now.getFullYear() - JOIN_DATE.getFullYear()) * 12 +
-    (now.getMonth() - JOIN_DATE.getMonth());
-  const years = totalMonths / 12;
-  return years.toFixed(1) + '+';
+  return EXPERIENCE_DISPLAY_TEXT;
 }
 
 /**

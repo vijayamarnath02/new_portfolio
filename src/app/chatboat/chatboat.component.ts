@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
+import { RESUME_ASSET_URL, RESUME_DOWNLOAD_NAME } from '../../constents';
 import { ResumeDownloadDialogComponent } from '../resume-download-dialog/resume-download-dialog.component';
 
 @Component({
@@ -16,6 +17,8 @@ export class ChatboatComponent {
   faDownload = faDownload;
   showPopup = false;
   isDialogOpen = false;
+  private readonly resumeUrl = RESUME_ASSET_URL;
+  private readonly resumeDownloadName = RESUME_DOWNLOAD_NAME;
 
   constructor(private dialog: MatDialog) { }
 
@@ -33,8 +36,8 @@ export class ChatboatComponent {
 
     // Trigger file download
     const link = document.createElement('a');
-    link.href = 'assets/VIJAY_AMARNATH_M_V_RESUME.pdf';
-    link.download = 'Vijay_Amarnath_M_V_Resume.pdf';
+    link.href = this.resumeUrl;
+    link.download = this.resumeDownloadName;
     link.click();
 
 

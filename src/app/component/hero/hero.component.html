@@ -26,8 +26,8 @@
 
                 <div class="hero-buttons">
                     <button class="btn btn-primary" (click)="navigateTo('projects')">View My Work</button>
-                    <a class="btn btn-secondary" href="assets/VIJAY_AMARNATH_M_V_RESUME.pdf"
-                        download="Vijay_Amarnath_M_V_Resume.pdf">
+                    <a class="btn btn-secondary" [href]="resumeUrl"
+                        [download]="resumeDownloadName">
                         <fa-icon [icon]="faDownload"></fa-icon>&nbsp;Download Resume
                     </a>
                     <button class="btn btn-outline" (click)="navigateTo('contact')">Get in Touch</button>

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faAward, faBriefcase, faCalendar, faGraduationCap, faDownload } from '@fortawesome/free-solid-svg-icons';
-import { getExperienceText, JOIN_DATE } from '../../../constents';
+import { RESUME_ASSET_URL, RESUME_DOWNLOAD_NAME, getExperienceText } from '../../../constents';
 
 @Component({
   selector: 'app-about',
@@ -16,6 +16,8 @@ export class AboutComponent {
   faCalendar = faCalendar;
   faGraduationCap = faGraduationCap;
   faDownload = faDownload;
+  resumeUrl = RESUME_ASSET_URL;
+  resumeDownloadName = RESUME_DOWNLOAD_NAME;
 
   highlights = [
     { icon: '🎓', text: 'B.Tech, IT — Karpagam College of Engineering (2019–2023)' },
@@ -24,7 +26,6 @@ export class AboutComponent {
     { icon: '📱', text: 'Available for Freelance Mobile Projects' },
   ];
 
-  /** Dynamic experience text — auto-calculates from JOIN_DATE (Sep 14, 2024) */
   get experienceText(): string {
     return getExperienceText();
   }

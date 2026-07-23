@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faDownload, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
-import { EMAIL, GITHUB, LINKEDIN, PHONE, getExperienceText } from '../../../constents';
+import { EMAIL, GITHUB, LINKEDIN, PHONE, RESUME_ASSET_URL, RESUME_DOWNLOAD_NAME, getExperienceText } from '../../../constents';
 
 @Component({
   selector: 'app-hero',
@@ -18,8 +18,9 @@ export class HeroComponent {
   faLinkedin = faLinkedin;
   faDownload = faDownload;
 
-  /** Dynamic experience text — auto-updates from JOIN_DATE */
   experienceText = getExperienceText();
+  resumeUrl = RESUME_ASSET_URL;
+  resumeDownloadName = RESUME_DOWNLOAD_NAME;
 
   heroStats = [
     { value: '40%', label: 'Deployment Time', direction: '↓' },
