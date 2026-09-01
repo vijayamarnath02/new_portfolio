@@ -1,27 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
 
 :root {
-    --background-color: #F8F9FA;
-    --primary-text: #212529;
-    --secondary-text: #6C757D;
-    --accent-primary: #6C2BD9;
-    --accent-hover: #5824B5;
-    --accent-light: #8a4fff;
-    --accent-glow: rgba(108, 43, 217, 0.15);
-    --border-line: #E0E0E0;
-    --card-background: rgba(255, 255, 255, 0.84);
-    --navbar-bg: rgba(255, 255, 255, 0.76);
+    --background-color: #f4f7f6;
+    --primary-text: #14231f;
+    --secondary-text: #5d6b67;
+    --accent-primary: #0e8f78;
+    --accent-hover: #08715e;
+    --accent-light: #1fb496;
+    --accent-glow: rgba(14, 143, 120, 0.16);
+    --border-line: #d9e3df;
+    --card-background: rgba(255, 255, 255, 0.9);
+    --navbar-bg: rgba(244, 247, 246, 0.8);
     --button-text: #ffffff;
     --font-size-body: 1rem;
     --font-header-size: 2rem;
     --font-header-weight: 800;
-    --font-family-body: 'Poppins', sans-serif;
-    --font-family-heading: 'Poppins', sans-serif;
+    --font-family-body: 'Manrope', sans-serif;
+    --font-family-heading: 'Manrope', sans-serif;
     --sub-heading-size: 2.8rem;
     --box-shadow: 0 18px 44px rgba(0, 0, 0, 0.08);
     --section-padding: 72px 0;
-    --gradient-primary: linear-gradient(135deg, #6C2BD9 0%, #8a4fff 48%, #5824B5 100%);
-    --gradient-subtle: linear-gradient(135deg, rgba(108, 43, 217, 0.05), rgba(138, 79, 255, 0.08));
+    --gradient-primary: linear-gradient(135deg, #0e8f78 0%, #16a887 52%, #08715e 100%);
+    --gradient-subtle: linear-gradient(135deg, rgba(14, 143, 120, 0.05), rgba(31, 180, 150, 0.1));
     --surface-solid: #ffffff;
     --surface-overlay-1: rgba(255, 255, 255, 0.18);
     --surface-overlay-2: rgba(255, 255, 255, 0.28);
@@ -34,21 +34,21 @@
 }
 
 .dark-theme {
-    --background-color: #0a0a10;
-    --primary-text: #EAEAEA;
-    --secondary-text: #A0A0A0;
-    --accent-primary: #8a4fff;
-    --accent-hover: #b07fff;
-    --accent-light: rgba(138, 79, 255, 0.14);
-    --accent-glow: rgba(138, 79, 255, 0.2);
-    --border-line: rgba(30, 30, 42, 0.85);
-    --card-background: rgba(18, 18, 28, 0.74);
-    --navbar-bg: rgba(10, 10, 16, 0.7);
+    --background-color: #0b1513;
+    --primary-text: #edf6f2;
+    --secondary-text: #adbfba;
+    --accent-primary: #38c6a5;
+    --accent-hover: #65d8bd;
+    --accent-light: rgba(56, 198, 165, 0.14);
+    --accent-glow: rgba(56, 198, 165, 0.18);
+    --border-line: rgba(112, 158, 146, 0.25);
+    --card-background: rgba(17, 33, 29, 0.78);
+    --navbar-bg: rgba(11, 21, 19, 0.78);
     --button-text: #ffffff;
     --box-shadow: 0 18px 44px rgba(2, 8, 16, 0.44);
-    --gradient-primary: linear-gradient(135deg, #8a4fff 0%, #b07fff 55%, #6C2BD9 100%);
-    --gradient-subtle: linear-gradient(135deg, rgba(138, 79, 255, 0.1), rgba(176, 127, 255, 0.1));
-    --surface-solid: #191925;
+    --gradient-primary: linear-gradient(135deg, #1da98c 0%, #53d4b5 55%, #0b7a66 100%);
+    --gradient-subtle: linear-gradient(135deg, rgba(29, 169, 140, 0.1), rgba(83, 212, 181, 0.1));
+    --surface-solid: #11211d;
     --surface-overlay-1: rgba(255, 255, 255, 0.03);
     --surface-overlay-2: rgba(255, 255, 255, 0.05);
     --surface-overlay-3: rgba(255, 255, 255, 0.08);
@@ -77,8 +77,8 @@ body {
     font-family: var(--font-family-body);
     background-color: var(--background-color);
     background-image:
-        radial-gradient(circle at top left, rgba(108, 43, 217, 0.12), transparent 30%),
-        radial-gradient(circle at 85% 18%, rgba(138, 79, 255, 0.12), transparent 22%),
+        radial-gradient(circle at top left, rgba(14, 143, 120, 0.12), transparent 30%),
+        radial-gradient(circle at 85% 18%, rgba(31, 180, 150, 0.1), transparent 22%),
         var(--body-top-wash);
     background-attachment: fixed;
     min-height: 100vh;

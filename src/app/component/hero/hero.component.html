@@ -15,8 +15,8 @@
                     <span class="typing">Full Stack Developer | MEAN &amp; MERN</span>
                 </h3>
 
-                <p class="hero-sub-headline">Building enterprise Angular platforms, React dashboards, and Node.js APIs</p>
-                <p class="hero-tagline">Angular 17 &bull; React.js &bull; Node.js &bull; Express &bull; MongoDB &bull; Ionic &bull; Docker &bull; Kubernetes</p>
+                <p class="hero-sub-headline">I build dependable products for teams that run real operations.</p>
+                <p class="hero-tagline">Angular / React / Node.js / MongoDB / Ionic</p>
 
                 <p class="hero-desc">
                     Full Stack Developer with {{ experienceText }} years of experience building enterprise web applications,
@@ -25,26 +25,15 @@
                     and shipped a React-based analytics module with strong focus on performance and release quality.
                 </p>
 
-                <div class="hero-proof-strip">
-                    <span class="proof-pill" *ngFor="let point of heroProofPoints">{{ point }}</span>
-                </div>
-
-                <div class="hero-focus-grid">
-                    <div class="hero-focus-card" *ngFor="let focus of roleFocus">
-                        <span class="focus-kicker">{{ focus.kicker }}</span>
-                        <strong>{{ focus.title }}</strong>
-                        <p>{{ focus.copy }}</p>
-                    </div>
-                </div>
-
                 <div class="hero-buttons">
                     <button class="btn btn-primary" (click)="navigateTo('projects')">View My Work</button>
                     <a class="btn btn-secondary" [href]="resumeUrl"
                         [download]="resumeDownloadName">
                         <fa-icon [icon]="faDownload"></fa-icon>&nbsp;Download Resume
                     </a>
-                    <button class="btn btn-outline" (click)="navigateTo('contact')">Get in Touch</button>
                 </div>
+
+                <p class="hero-trust-line">Currently at Purpleslate &middot; Chennai, India &middot; Open to full-stack opportunities</p>
 
                 <div class="hero-stats-row">
                     <div class="hero-stat-card" *ngFor="let s of heroStats">
@@ -69,30 +58,28 @@
                 </div>
             </div>
 
-            <div class="hero-visual" aria-hidden="true">
-                <div class="orbit outer-orbit"></div>
-                <div class="orbit inner-orbit"></div>
-                <div class="avatar-circle">
-                    <span class="avatar-initials">VA</span>
+            <div class="hero-visual" aria-label="Product delivery summary">
+                <div class="work-panel-head">
+                    <span class="work-panel-eyebrow">Product delivery snapshot</span>
+                    <span class="work-status"><i></i> Shipping</span>
                 </div>
-
-                <div class="visual-panel panel-experience">
-                    <span class="panel-label">Experience</span>
-                    <strong>{{ experienceText }}</strong>
-                    <span class="panel-copy">MEAN and MERN delivery across enterprise products</span>
-                </div>
-
-                <div class="visual-panel panel-domains">
-                    <span class="panel-label">Recent Work</span>
-                    <strong>Approvals and analytics</strong>
-                    <span class="panel-copy">6 micro frontends, React dashboards, monitored services</span>
-                </div>
-
-                <div class="visual-panel panel-stack">
-                    <div class="stack-row" *ngFor="let signal of deliverySignals">
-                        <span>{{ signal.label }}</span>
-                        <strong>{{ signal.value }}</strong>
+                <div class="work-panel-title">
+                    <span class="work-panel-index">01</span>
+                    <div>
+                        <strong>Enterprise workflow systems</strong>
+                        <p>From approval journeys to analytics reporting</p>
                     </div>
+                </div>
+                <div class="delivery-map">
+                    <div class="delivery-node node-ui"><span>Interface</span><strong>Angular + React</strong></div>
+                    <div class="delivery-node node-api"><span>Services</span><strong>Node + Express</strong></div>
+                    <div class="delivery-node node-data"><span>Data</span><strong>Mongo + Elastic</strong></div>
+                    <div class="delivery-node node-ops"><span>Release</span><strong>Docker + K8s</strong></div>
+                </div>
+                <div class="work-panel-footer">
+                    <div><strong>6</strong><span>production MFEs</span></div>
+                    <div><strong>30+</strong><span>API flows</span></div>
+                    <div><strong>40%</strong><span>faster delivery</span></div>
                 </div>
             </div>
 
