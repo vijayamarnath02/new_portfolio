@@ -14,11 +14,12 @@ export class SkilsComponent implements OnInit {
   ngOnInit() {
     this.skillCategories = [
       {
-        title: 'Frontend (Production-grade)',
+        title: 'Frontend (Angular + React)',
         tag: 'Primary Stack',
-        summary: 'Angular-heavy delivery for enterprise UX, reactive workflows, shared components, and micro frontend architecture.',
+        summary: 'Enterprise frontend delivery across Angular micro frontends and React-based reporting experiences.',
         skills: [
           { name: 'Angular 14-17', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg' },
+          { name: 'React.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
           { name: 'TypeScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg' },
           { name: 'JavaScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
           { name: 'RxJS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rxjs/rxjs-original.svg' },
@@ -38,36 +39,39 @@ export class SkilsComponent implements OnInit {
         ]
       },
       {
-        title: 'Backend',
+        title: 'Backend and APIs',
         tag: 'API Delivery',
-        summary: 'REST APIs, middleware, authentication, and business logic integration using Node.js and Express.',
+        summary: 'REST APIs, middleware, authentication, business logic, and data-processing services using Node.js and Express.',
         skills: [
           { name: 'Node.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
           { name: 'Express.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg' },
           { name: 'REST API Design', icon: '' },
           { name: 'JWT Authentication', icon: '' },
+          { name: 'OAuth 2.0', icon: '' },
           { name: 'Middleware (CORS, body-parser)', icon: '' },
           { name: 'Nodemailer', icon: '' },
+          { name: 'CSV Processing', icon: '' },
           { name: 'Route-level Architecture', icon: '' },
           { name: 'Error Handling', icon: '' },
         ]
       },
       {
-        title: 'Database',
+        title: 'Databases and Search',
         tag: 'Data Layer',
-        summary: 'MongoDB-backed application work with schema design, CRUD patterns, and aggregation-focused data handling.',
+        summary: 'MongoDB-backed application work with schema design, CRUD patterns, reporting data flows, and search-oriented querying.',
         skills: [
           { name: 'MongoDB', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' },
           { name: 'Mongoose ODM', icon: '' },
           { name: 'Schema Design', icon: '' },
           { name: 'CRUD Operations', icon: '' },
           { name: 'Aggregation', icon: '' },
+          { name: 'Elasticsearch', icon: '' },
         ]
       },
       {
-        title: 'Mobile (Freelance)',
-        tag: 'Client Delivery',
-        summary: 'Cross-platform Ionic applications with Angular, mobile-first UI, and end-to-end freelance execution.',
+        title: 'Mobile and PWA',
+        tag: 'Cross-Platform',
+        summary: 'Cross-platform Ionic applications with Angular, mobile-first UI, device features, and PWA-oriented delivery.',
         skills: [
           { name: 'Ionic Framework', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ionic/ionic-original.svg' },
           { name: 'Capacitor', icon: '' },
@@ -75,14 +79,16 @@ export class SkilsComponent implements OnInit {
           { name: 'Cross-Platform Apps', icon: '' },
           { name: 'Mobile-First UI/UX', icon: '' },
           { name: 'Responsive Design', icon: '' },
+          { name: 'PWA', icon: '' },
         ]
       },
       {
-        title: 'Architecture & Tools',
+        title: 'Architecture and Delivery',
         tag: 'System Thinking',
-        summary: 'Scalable frontend structure, access control, component libraries, and modern delivery workflows.',
+        summary: 'Scalable frontend structure, access control, component libraries, and modern release workflows.',
         skills: [
           { name: 'Micro Frontend', icon: '' },
+          { name: 'Module Federation', icon: '' },
           { name: 'SOLID Principles', icon: '' },
           { name: 'Reusable Component Libraries', icon: '' },
           { name: 'RBAC', icon: '' },
@@ -92,17 +98,24 @@ export class SkilsComponent implements OnInit {
           { name: 'GitHub', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg' },
           { name: 'Agile/Scrum', icon: '' },
           { name: 'npm', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/npm/npm-original-wordmark.svg' },
+          { name: 'GitHub Actions', icon: '' },
+          { name: 'Docker', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg' },
+          { name: 'Kubernetes', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg' },
+          { name: 'Grafana', icon: '' },
         ]
       },
       {
-        title: 'AI Tools',
-        tag: 'Accelerators',
-        summary: 'AI-assisted development tools used to improve speed, debugging, prototyping, and day-to-day productivity.',
+        title: 'Testing and Workflow',
+        tag: 'Engineering Hygiene',
+        summary: 'Tools and practices used to keep features reliable, reviewable, and ready for release.',
         skills: [
-          { name: 'Claude (Anthropic)', icon: '' },
-          { name: 'Antigravity (Google DeepMind)', icon: '' },
-          { name: 'GitHub Copilot', icon: '' },
-          { name: 'GitHub Copilot CLI', icon: '' },
+          { name: 'Jest', icon: '' },
+          { name: 'Unit Testing', icon: '' },
+          { name: 'Code Reviews', icon: '' },
+          { name: 'Postman', icon: '' },
+          { name: 'Swagger', icon: '' },
+          { name: 'JIRA', icon: '' },
+          { name: 'Confluence', icon: '' },
         ]
       },
     ];

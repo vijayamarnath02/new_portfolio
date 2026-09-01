@@ -6,7 +6,7 @@ export const THEME = "theme"
 export const ADDRESS = "Chennai, Tamil Nadu, India"
 export const RESUME_ASSET_URL = 'assets/VIJAY_AMARNATH_M_V_RESUME_v2.5.pdf';
 export const RESUME_DOWNLOAD_NAME = 'Vijay_Amarnath_M_V_Resume_v2.5.pdf';
-export const EXPERIENCE_DISPLAY_TEXT = '2.5+';
+export const EXPERIENCE_DISPLAY_TEXT = '2+';
 
 export function getExperienceText(): string {
   return EXPERIENCE_DISPLAY_TEXT;

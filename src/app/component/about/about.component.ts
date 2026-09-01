@@ -20,30 +20,48 @@ export class AboutComponent {
   resumeDownloadName = RESUME_DOWNLOAD_NAME;
 
   highlights = [
-    { icon: '🏢', text: 'Enterprise product delivery across approval and ERP systems' },
+    { icon: '🏢', text: 'Enterprise product delivery across approval workflows and analytics modules' },
     { icon: '📍', text: 'Based in Chennai, India' },
-    { icon: '💼', text: 'Open to Remote, Hybrid, or On-site roles' },
-    { icon: '📱', text: 'Available for freelance Ionic mobile projects' },
+    { icon: '💼', text: 'Open to Full-Stack, Frontend, and Product Engineering roles' },
+    { icon: '📦', text: 'Hands-on with Docker, Kubernetes, and Grafana-based monitoring' },
   ];
 
   careerMarkers = [
-    { phase: 'Current', title: 'Purpleslate', detail: 'Angular micro frontends, approval workflows, mobile views' },
-    { phase: 'Before', title: 'Digitalsoft Group', detail: 'MEAN stack ERP delivery with Angular CLI and Node.js' },
-    { phase: 'Foundation', title: 'Mallow + Freelance', detail: 'Full-stack training, hybrid mobile apps, end-to-end ownership' },
+    { phase: 'Current', title: 'Purpleslate Product Delivery', detail: 'Angular micro frontends, role-based approvals, API services, and Ionic mobile views' },
+    { phase: 'Breadth', title: 'React Analytics Work', detail: 'CSV ingestion flows, reporting dashboards, Elasticsearch search, and monitored deployments' },
+    { phase: 'Growth', title: 'Cloud-Native Mindset', detail: 'Containerization, CI/CD collaboration, and production-focused performance tuning' },
   ];
 
   expertisePillars = [
     {
-      title: 'Enterprise Frontend',
-      copy: 'Angular apps with reactive forms, shared components, role-based workflows, and micro frontend delivery.',
+      title: 'Angular and React Frontend',
+      copy: 'Enterprise UI work across Angular micro frontends, reusable component systems, reactive forms, and React-based reporting dashboards.',
     },
     {
-      title: 'Backend Integration',
-      copy: 'Node.js and Express APIs, business workflow integration, auth flows, and production-focused debugging.',
+      title: 'Node.js API Systems',
+      copy: 'Node.js and Express services with JWT auth, workflow integration, CSV processing, and production-focused debugging.',
     },
     {
-      title: 'Mobile Delivery',
-      copy: 'Ionic + Angular apps with responsive UX, device capabilities, and client-facing freelance execution.',
+      title: 'Delivery and Operations',
+      copy: 'Performance tuning, Docker and Kubernetes exposure, Grafana monitoring, and cross-team collaboration through release cycles.',
+    },
+  ];
+
+  positioningSignals = [
+    {
+      kicker: 'Role Fit',
+      title: 'Frontend-heavy full-stack developer',
+      copy: 'Strongest in Angular and TypeScript, with React delivery experience for dashboards and analytics modules.',
+    },
+    {
+      kicker: 'System Focus',
+      title: 'Business workflows that need reliability',
+      copy: 'Experience building approval journeys, data-heavy forms, API integrations, and role-based product experiences.',
+    },
+    {
+      kicker: 'Team Value',
+      title: 'Comfortable shipping inside product teams',
+      copy: 'Used to code reviews, sprint delivery, shared ownership, and improving maintainability while features keep moving.',
     },
   ];
 

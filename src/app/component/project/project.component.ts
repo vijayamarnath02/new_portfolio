@@ -15,85 +15,82 @@ export class ProjectComponent implements OnInit {
     {
       id: 1,
       title: 'Import-Export Business Approver',
-      description: 'Enterprise multi-module approval workflow application built on Angular Micro Frontend architecture with Module Federation. Features role-based approvals, dynamic forms, and real-time status tracking.',
+      description: 'Enterprise multi-module approval workflow platform built on Angular Micro Frontend architecture with Module Federation, role-based approvals, dynamic forms, and real-time status tracking.',
       image: 'https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      technologies: ['Angular 17', 'Module Federation', 'RxJS', 'Akita', 'TypeScript', 'RBAC'],
+      technologies: ['Angular 17', 'Module Federation', 'RxJS', 'Akita', 'TypeScript', 'Node.js', 'Ionic'],
       category: 'Angular',
       demoUrl: null,
       githubUrl: null,
       note: 'Production work at Purpleslate — code not publicly available',
       download: false,
-      featured: true
+      featured: true,
+      scope: 'Enterprise Platform',
+      impact: '6 production micro frontends'
     },
     {
       id: 2,
-      title: 'Deployment Timeline Manager',
-      description: 'Full-stack tool for tracking deployment timelines and statuses across agile teams. Includes automated email notifications via Nodemailer and a reusable npm component package built with Rollup.',
+      title: 'NC - Data Analytics Module',
+      description: 'React.js and Node.js analytics module that handles CSV upload, validation, reporting dashboards, and Elasticsearch-powered data exploration for business reporting.',
       image: 'https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      technologies: ['Node.js', 'Express', 'React', 'Tailwind CSS', 'Nodemailer'],
-      category: 'Node.js',
+      technologies: ['React.js', 'Node.js', 'Express.js', 'Elasticsearch', 'Kubernetes', 'Grafana'],
+      category: 'React',
       demoUrl: null,
       githubUrl: null,
-      note: null,
+      note: 'Internal Purpleslate module — code not publicly available',
       download: false,
-      featured: false
+      featured: true,
+      scope: 'Analytics Module',
+      impact: 'CSV ingestion to dashboard reporting'
     },
     {
       id: 3,
-      title: 'Employee Management System',
-      description: 'End-to-end employee records and attendance management system with full CRUD operations, MongoDB schema design, Angular Material UI, and reactive form validation.',
+      title: 'Full-Stack E-Commerce Platform',
+      description: 'End-to-end commerce application with Angular frontend, Node.js and Express backend, MongoDB data models, JWT auth, and role-based product workflows.',
       image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      technologies: ['Angular', 'Node.js', 'Express', 'MongoDB', 'Mongoose'],
+      technologies: ['Angular', 'Node.js', 'Express.js', 'MongoDB', 'JWT', 'Mongoose', 'Ionic'],
       category: 'MEAN Stack',
       demoUrl: null,
       githubUrl: null,
       note: null,
       download: false,
-      featured: false
+      featured: false,
+      scope: 'Self-Initiated Build',
+      impact: 'Auth, CRUD, and role-based flows'
     },
     {
       id: 4,
-      title: 'Ionic Hybrid Mobile App',
-      description: 'Cross-platform hybrid mobile application built for a freelance client. Runs on both Android and iOS from a single Angular codebase, with native device features integrated via Capacitor.',
+      title: 'Ionic Angular Task Manager',
+      description: 'Cross-platform task manager built with Ionic Angular and Capacitor, featuring offline-friendly flows, JWT-authenticated sync, reminders, and responsive mobile UX.',
       image: 'https://images.pexels.com/photos/607812/pexels-photo-607812.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      technologies: ['Ionic', 'Angular', 'Capacitor', 'TypeScript', 'RxJS'],
+      technologies: ['Ionic', 'Angular', 'Capacitor', 'Node.js', 'Express.js', 'MongoDB', 'RxJS'],
       category: 'Ionic',
       demoUrl: null,
       githubUrl: null,
       note: null,
       download: false,
-      featured: false
+      featured: false,
+      scope: 'Mobile Product',
+      impact: 'Android and iOS from one codebase'
     },
     {
       id: 5,
-      title: 'Product Catalog Integration',
-      description: 'Product catalog with third-party API integration, token-based authentication, and resilient data streams using RxJS operators. Features optimized loading states and smooth UX.',
+      title: 'Personal Portfolio Website',
+      description: 'Responsive Angular portfolio showcasing experience, projects, and technical strengths with a performance-first UI and deployment automation on Netlify.',
       image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      technologies: ['Angular', 'RxJS', 'REST API', 'JWT', 'TypeScript'],
+      technologies: ['Angular', 'TypeScript', 'SCSS', 'Netlify', 'Lighthouse'],
       category: 'Angular',
-      demoUrl: null,
+      demoUrl: 'https://vijayamarnath.netlify.app',
       githubUrl: null,
       note: null,
       download: false,
-      featured: false
-    },
-    {
-      id: 6,
-      title: 'Weather Forecast App',
-      description: 'A weather application built with Ionic + Angular providing current conditions and forecasts for locations worldwide using the OpenWeatherMap API, with smooth animations and cross-platform support.',
-      image: 'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      technologies: ['Ionic', 'Angular', 'TypeScript', 'OpenWeatherMap API', 'SCSS'],
-      category: 'Ionic',
-      demoUrl: '../../../assetes/app-debug.apk',
-      githubUrl: 'https://github.com/vijayamarnath02/Weather_App',
-      note: null,
-      download: true,
-      featured: false
+      featured: false,
+      scope: 'Personal Brand',
+      impact: '95+ Lighthouse performance target'
     },
   ];
 
   filteredProjects: any[] = [];
-  uniqueTechnologies: string[] = ['Angular', 'Node.js', 'MEAN Stack', 'Ionic'];
+  uniqueTechnologies: string[] = ['Angular', 'React', 'MEAN Stack', 'Ionic'];
 
   ngOnInit(): void {
     this.filterProjects('All');

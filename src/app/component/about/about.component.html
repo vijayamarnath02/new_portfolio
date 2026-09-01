@@ -4,17 +4,17 @@
         <section id="about">
             <h2 class="gradient-text">About <span class="gradient"> Me</span></h2>
         </section>
-        <p class="section-sub">MEAN Stack Developer building enterprise SPAs and cross-platform mobile apps.</p>
+        <p class="section-sub">Full Stack Developer with 2+ years across Angular, React, Node.js, MongoDB, and Ionic delivery.</p>
     </div>
 
     <div class="about-body">
         <div class="career-snapshot">
             <div class="snapshot-card snapshot-intro">
                 <span class="snapshot-label">Career Snapshot</span>
-                <h3>{{ experienceText }} Years of MEAN Stack Delivery</h3>
+                <h3>{{ experienceText }} Years of Product-Focused MEAN and MERN Delivery</h3>
                 <p>
-                    Building enterprise applications with Angular, Node.js, MongoDB, and Ionic across product teams,
-                    ERP workflows, and freelance mobile delivery.
+                    Building enterprise applications with Angular, React, Node.js, MongoDB, and Ionic across
+                    approval workflows, analytics modules, and business-facing product teams.
                 </p>
             </div>
 
@@ -25,11 +25,11 @@
                 </div>
                 <div class="snapshot-metric">
                     <span class="metric-value">30+</span>
-                    <span class="metric-label">REST APIs Worked On</span>
+                    <span class="metric-label">API Flows and Integrations</span>
                 </div>
                 <div class="snapshot-metric">
-                    <span class="metric-value">3</span>
-                    <span class="metric-label">Work Modes: Product, ERP, Freelance</span>
+                    <span class="metric-value">2</span>
+                    <span class="metric-label">Frontend Tracks: Angular and React</span>
                 </div>
             </div>
 
@@ -45,22 +45,30 @@
         </div>
 
         <div class="about-text">
-            <h3>MEAN Stack Developer Focused on Business-Critical Products</h3>
+            <h3>Full Stack Developer Focused on Business-Critical Products</h3>
 
             <p class="par">
                 With {{ experienceText }} years of hands-on experience, I build business-facing software that has to be
                 stable, scalable, and easy for teams to work with. My recent work spans Angular micro frontends,
-                approval workflow systems, ERP modules, and hybrid mobile applications.
+                approval workflow systems, React analytics dashboards, and hybrid mobile applications.
             </p>
             <p class="par">
-                I work across the full JavaScript stack: Angular on the frontend, Node.js + Express on the backend,
-                MongoDB for the data layer, and Ionic for cross-platform mobile delivery. That combination lets me move
-                comfortably between UI architecture, business logic, and production integration.
+                I work across the full JavaScript stack: Angular and React on the frontend, Node.js + Express on the
+                backend, MongoDB for the data layer, and Ionic for cross-platform mobile delivery. That combination lets
+                me move comfortably between UI architecture, business logic, and production integration.
             </p>
             <p class="par">
-                Outside full-time product work, I also handle freelance projects end-to-end, which has strengthened my
-                ownership across requirement gathering, implementation, testing, and release preparation.
+                Alongside feature delivery, I have been involved in performance optimization, shared component design,
+                API contract alignment, and release practices that improve both developer velocity and product quality.
             </p>
+
+            <div class="positioning-grid">
+                <div class="positioning-card" *ngFor="let signal of positioningSignals">
+                    <span class="positioning-kicker">{{ signal.kicker }}</span>
+                    <strong>{{ signal.title }}</strong>
+                    <p>{{ signal.copy }}</p>
+                </div>
+            </div>
 
             <div class="stats-grid">
                 <div class="stat-card">
@@ -74,7 +82,7 @@
                     <fa-icon [icon]="faAward"></fa-icon>
                     <div>
                         <span class="stat-number">30+</span>
-                        <span class="stat-label">API Endpoints &amp; Integrations</span>
+                        <span class="stat-label">API Flows &amp; Integrations</span>
                     </div>
                 </div>
                 <div class="stat-card">
@@ -87,8 +95,8 @@
                 <div class="stat-card">
                     <fa-icon [icon]="faGraduationCap"></fa-icon>
                     <div>
-                        <span class="stat-number">ERP</span>
-                        <span class="stat-label">Plus Enterprise Workflow Delivery</span>
+                        <span class="stat-number">Ops</span>
+                        <span class="stat-label">Docker, Kubernetes, Grafana Exposure</span>
                     </div>
                 </div>
             </div>

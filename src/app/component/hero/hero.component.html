@@ -5,27 +5,36 @@
             <div class="hero-content">
                 <div class="available-badge">
                     <span class="badge-dot"></span>
-                    2.5+ Years in Enterprise MEAN Stack Delivery
+                    2+ Years in MEAN and MERN Product Delivery
                 </div>
 
                 <h2 class="hero-greeting">Hello, I'm</h2>
                 <h1 class="hero-name">Vijay Amarnath M V</h1>
 
                 <h3 class="typewriter-row">
-                    <span class="typing">MEAN Stack Developer</span>
+                    <span class="typing">Full Stack Developer | MEAN &amp; MERN</span>
                 </h3>
 
-                <p class="hero-sub-headline">Building Enterprise Platforms, ERP Modules &amp; Hybrid Mobile Apps</p>
-                <p class="hero-tagline">Angular 17 &bull; Node.js &bull; Express &bull; MongoDB &bull; Ionic &bull; TypeScript</p>
+                <p class="hero-sub-headline">Building enterprise Angular platforms, React dashboards, and Node.js APIs</p>
+                <p class="hero-tagline">Angular 17 &bull; React.js &bull; Node.js &bull; Express &bull; MongoDB &bull; Ionic &bull; Docker &bull; Kubernetes</p>
 
                 <p class="hero-desc">
-                    MEAN Stack Developer with {{ experienceText }} years of experience building enterprise-grade web applications,
-                    ERP workflows, and cross-platform mobile products. Currently shipping Angular Micro Frontends at Purpleslate,
-                    with earlier MEAN stack ERP delivery at Digitalsoft Group and ongoing freelance Ionic + Angular work.
+                    Full Stack Developer with {{ experienceText }} years of experience building enterprise web applications,
+                    API services, and hybrid mobile products using Angular, React, Node.js, Express, and MongoDB.
+                    At Purpleslate, I have delivered 6 production micro frontends, contributed to 30+ API flows,
+                    and shipped a React-based analytics module with strong focus on performance and release quality.
                 </p>
 
                 <div class="hero-proof-strip">
                     <span class="proof-pill" *ngFor="let point of heroProofPoints">{{ point }}</span>
+                </div>
+
+                <div class="hero-focus-grid">
+                    <div class="hero-focus-card" *ngFor="let focus of roleFocus">
+                        <span class="focus-kicker">{{ focus.kicker }}</span>
+                        <strong>{{ focus.title }}</strong>
+                        <p>{{ focus.copy }}</p>
+                    </div>
                 </div>
 
                 <div class="hero-buttons">
@@ -70,13 +79,13 @@
                 <div class="visual-panel panel-experience">
                     <span class="panel-label">Experience</span>
                     <strong>{{ experienceText }}</strong>
-                    <span class="panel-copy">MEAN stack, ERP, and enterprise product delivery</span>
+                    <span class="panel-copy">MEAN and MERN delivery across enterprise products</span>
                 </div>
 
                 <div class="visual-panel panel-domains">
                     <span class="panel-label">Recent Work</span>
-                    <strong>Approval Workflows</strong>
-                    <span class="panel-copy">6 micro frontends, 30+ APIs, mobile views</span>
+                    <strong>Approvals and analytics</strong>
+                    <span class="panel-copy">6 micro frontends, React dashboards, monitored services</span>
                 </div>
 
                 <div class="visual-panel panel-stack">

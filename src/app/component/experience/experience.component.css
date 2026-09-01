@@ -173,6 +173,8 @@
 .badge-freelance   { background: #d1fae5; color: #065f46; }
 .badge-internship  { background: #fef3c7; color: #92400e; }
 .badge-training    { background: #ede9fe; color: #5b21b6; }
+.badge-intern-to-full-time { background: #dcfce7; color: #166534; }
+.badge-project-work { background: #e0f2fe; color: #075985; }
 
 /* ── Body ── */
 .exp-description {

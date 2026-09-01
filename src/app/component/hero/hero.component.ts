@@ -23,22 +23,40 @@ export class HeroComponent {
   resumeDownloadName = RESUME_DOWNLOAD_NAME;
 
   heroStats = [
-    { value: '2.5+', label: 'Years Across MEAN', direction: '' },
-    { value: '6', label: 'MFE Modules Shipped', direction: '' },
-    { value: '30+', label: 'REST APIs Worked On', direction: '' },
-    { value: '5', label: 'Business Roles Supported', direction: '' },
+    { value: '2+', label: 'Years in Full-Stack Delivery', direction: '' },
+    { value: '6', label: 'Production MFEs Shipped', direction: '' },
+    { value: '30+', label: 'API Flows and Endpoints', direction: '' },
+    { value: '40%', label: 'Faster Deployment Flow', direction: '' },
   ];
 
   heroProofPoints = [
-    'Enterprise approval workflows',
-    'ERP software delivery',
-    'Hybrid mobile app builds',
+    'Angular micro frontends in production',
+    'React + Node analytics module delivery',
+    'Docker, Kubernetes, and Grafana exposure',
   ];
 
   deliverySignals = [
-    { label: 'Current Focus', value: 'Angular Micro Frontends' },
-    { label: 'Backend Stack', value: 'Node.js + Express + MongoDB' },
-    { label: 'Delivery Mode', value: 'Full-time + Freelance' },
+    { label: 'Frontend', value: 'Angular + React' },
+    { label: 'Backend', value: 'Node.js + Express + MongoDB' },
+    { label: 'Operating Style', value: 'Shipping business-critical product work' },
+  ];
+
+  roleFocus = [
+    {
+      kicker: 'MEAN Core',
+      title: 'Enterprise Angular and API delivery',
+      copy: 'Built approval workflows, reusable UI systems, and TypeScript-first business modules across production teams.',
+    },
+    {
+      kicker: 'MERN Breadth',
+      title: 'React dashboards and analytics modules',
+      copy: 'Delivered React-based reporting experiences backed by Node.js services, CSV ingestion, and scalable data flows.',
+    },
+    {
+      kicker: 'Delivery Mindset',
+      title: 'Performance, release velocity, and maintainability',
+      copy: 'Worked with Module Federation, Docker, Kubernetes, and Grafana to support stable releases and measurable improvements.',
+    },
   ];
 
   userData = {
