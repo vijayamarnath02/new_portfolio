@@ -4,8 +4,8 @@ export const LINKEDIN = "https://www.linkedin.com/in/vijay-amarnath-m-v/";
 export const GITHUB = "https://github.com/vijayamarnath02";
 export const THEME = "theme"
 export const ADDRESS = "Chennai, Tamil Nadu, India"
-export const RESUME_ASSET_URL = 'assets/VIJAY_AMARNATH_M_V_RESUME_v2.5.pdf';
-export const RESUME_DOWNLOAD_NAME = 'Vijay_Amarnath_M_V_Resume_v2.5.pdf';
+export const RESUME_ASSET_URL = 'assets/Vijay_Amarnath_MV_Resume_2026.pdf';
+export const RESUME_DOWNLOAD_NAME = 'Vijay_Amarnath_MV_Resume.pdf';
 export const EXPERIENCE_DISPLAY_TEXT = '2+';
 
 export function getExperienceText(): string {
