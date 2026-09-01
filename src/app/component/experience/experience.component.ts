@@ -34,7 +34,7 @@ export class ExperienceComponent {
       type: 'Intern to Full-time',
       project: 'Import-Export Business Approver and NC Data Analytics Module',
       description: 'Full Stack Developer track covering Angular micro frontends, React analytics dashboards, Node.js API services, and Ionic-based mobile views. Joined as an intern in June 2024 and converted to full-time in September 2024.',
-      tech: ['Angular 17', 'TypeScript', 'RxJS', 'Akita Store', 'Module Federation', 'Angular Material', 'REST APIs', 'JWT', 'RBAC', 'Reactive Forms', 'SCSS'],
+      tech: ['Angular 17', 'React.js', 'Node.js', 'Express.js', 'TypeScript', 'RxJS', 'Akita Store', 'Module Federation', 'Angular Material', 'REST APIs', 'JWT', 'RBAC', 'Reactive Forms', 'SCSS'],
       highlights: [
         'Delivered 6 independently deployable Angular micro frontends using Module Federation, improving deployment velocity by 40% across approval workflows',
         'Built 30+ API flows with Node.js and Express, including JWT auth, centralized error handling, and MongoDB-backed business logic',
